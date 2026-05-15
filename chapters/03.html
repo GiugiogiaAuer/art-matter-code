@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3 — Art Between Matter and Code</title>
+  <meta name="description" content="Chapter 3: Procedurality and Artificial Growth — supplementary materials.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .chapter-hero {
+      max-width: var(--max);
+      margin: 4rem auto 2rem;
+      padding: 0 2rem;
+    }
+    .chapter-hero .chap-label {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .chapter-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin-bottom: .8rem;
+    }
+    .chapter-hero .lead {
+      font-size: 1rem;
+      color: var(--sub);
+      max-width: 680px;
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      font-size: .85rem;
+      color: var(--sub);
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      margin-bottom: 2rem;
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+
+    .mat-section { margin-bottom: 3rem; }
+    .mat-section h2 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin-bottom: .3rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--accent2);
+      display: inline-block;
+    }
+    .mat-section p { font-size: .9rem; color: var(--sub); margin: .5rem 0 1rem; }
+    .mat-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    .mat-table th {
+      text-align: left;
+      padding: .5rem .8rem;
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-size: .75rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--border);
+    }
+    .mat-table td {
+      padding: .55rem .8rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .mat-table tr:last-child td { border-bottom: none; }
+    .mat-table tr:hover td { background: #f5f5f2; }
+    .mat-table a { font-weight: 500; }
+
+    .script-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .script-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+    .script-card h3 { font-size: .95rem; margin-bottom: .3rem; color: var(--ink); font-family: "Consolas", "Courier New", monospace; }
+    .script-card .env {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent2);
+      margin-bottom: .4rem;
+    }
+    .script-card p { font-size: .82rem; color: var(--sub); line-height: 1.5; }
+    .script-card .dl-link {
+      display: inline-block;
+      margin-top: .7rem;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Art Between Matter and Code</span>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-en="Home" data-zh="首页">Home</a></li>
+    <li><a href="../index.html#chapters" data-en="Chapters" data-zh="章节">Chapters</a></li>
+    <li><a href="../index.html#about" data-en="About" data-zh="关于">About</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="chapter-hero">
+  <a class="back-link" href="../index.html">← <span data-en="All chapters" data-zh="所有章节">All chapters</span></a>
+  <div class="chap-label" data-en="Chapter 3" data-zh="第3章">Chapter 3</div>
+  <h1 data-en="Procedurality and Artificial Growth: Algorithmic Logics in Art Practices"
+      data-zh="程序性与人工生长：艺术实践中的算法逻辑">Procedurality and Artificial Growth: Algorithmic Logics in Art Practices</h1>
+  <p class="lead"
+     data-en="From Picasso's light drawings to Geometry Nodes: how procedural logic, Fibonacci growth, and algorithmic unpredictability redefine sculpture — across Tony Cragg's stratified towers and Anish Kapoor's mirrored spheres."
+     data-zh="从毕加索的光迹绘画到几何节点：程序逻辑、斐波那契生长与算法不可预测性如何重新定义雕塑——从托尼·克拉格的层叠塔楼到安尼施·卡普尔的镜面球体。">
+    From Picasso's light drawings to Geometry Nodes: how procedural logic, Fibonacci growth, and algorithmic unpredictability redefine sculpture — across Tony Cragg's stratified towers and Anish Kapoor's mirrored spheres.
+  </p>
+</div>
+
+<!-- CHAPTER STRUCTURE -->
+<section>
+  <h2 class="section-title" data-en="Chapter Structure" data-zh="章节结构">Chapter Structure</h2>
+
+  <div class="toc">
+    <div class="toc-part">
+      <span class="toc-part-label" data-en="Part I — From Gesture to Code" data-zh="第一部分 — 从姿态到代码">Part I — From Gesture to Code</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">3.1</span>
+      <span class="toc-title" data-en="Digital Modeling and Procedural Modeling" data-zh="数字建模与程序建模">Digital Modeling and Procedural Modeling</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.1.1</span>
+      <span class="toc-title" data-en="The Immaterial Gesture: From Picasso to Procedural Logic" data-zh="非物质姿态：从毕加索到程序逻辑">The Immaterial Gesture: From Picasso to Procedural Logic</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.1.2</span>
+      <span class="toc-title" data-en="From Digital Handcraft to Procedural Systems" data-zh="从数字手工到程序系统">From Digital Handcraft to Procedural Systems</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.1.3</span>
+      <span class="toc-title" data-en="Contrasting Manual and Procedural Modeling" data-zh="手动建模与程序建模的对比">Contrasting Manual and Procedural Modeling</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.1.4</span>
+      <span class="toc-title" data-en="Enabling Complexity Through Code" data-zh="通过代码实现复杂性">Enabling Complexity Through Code</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">3.2</span>
+      <span class="toc-title" data-en="Procedural Sculpture and New Formative Logics" data-zh="程序雕塑与新形态逻辑">Procedural Sculpture and New Formative Logics</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.2.1</span>
+      <span class="toc-title" data-en="Algorithmic Sculptures and Natural Processes" data-zh="算法雕塑与自然过程">Algorithmic Sculptures and Natural Processes</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.2.2</span>
+      <span class="toc-title" data-en="Challenging Authorship and Embracing Complexity" data-zh="挑战作者身份，拥抱复杂性">Challenging Authorship and Embracing Complexity</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">3.3</span>
+      <span class="toc-title" data-en="Algorithms, Artificial Growth, and Unpredictable Forms" data-zh="算法、人工生长与不可预测的形态">Algorithms, Artificial Growth, and Unpredictable Forms</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.3.2</span>
+      <span class="toc-title" data-en="Unpredictability and Collaborative Creation" data-zh="不可预测性与协作创作">Unpredictability and Collaborative Creation</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">3.4</span>
+      <span class="toc-title" data-en="Procedurality as a New Aesthetic" data-zh="程序性作为新美学">Procedurality as a New Aesthetic</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.4.1</span>
+      <span class="toc-title" data-en="Prioritizing Process Over Product" data-zh="过程优先于产品">Prioritizing Process Over Product</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.4.2</span>
+      <span class="toc-title" data-en="Celebrating Complexity and Variation" data-zh="赞颂复杂性与变化">Celebrating Complexity and Variation</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">3.5</span>
+      <span class="toc-title" data-en="The Role of Immateriality" data-zh="非物质性的角色">The Role of Immateriality</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.5.1</span>
+      <span class="toc-title" data-en="Artworks as Code and Data" data-zh="作为代码与数据的艺术作品">Artworks as Code and Data</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.5.2</span>
+      <span class="toc-title" data-en="Infinite Reproducibility and New Artistic Paradigms" data-zh="无限可复制性与新艺术范式">Infinite Reproducibility and New Artistic Paradigms</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">3.6</span>
+      <span class="toc-title" data-en="Examples of Procedural and Artificial Growth" data-zh="程序性与人工生长示例">Examples of Procedural and Artificial Growth</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.6.1</span>
+      <span class="toc-title" data-en="Introductory Procedural Studies in Blender: Modifiers and Geometry Nodes" data-zh="Blender中的程序入门研究：修改器与几何节点">Introductory Procedural Studies in Blender: Modifiers and Geometry Nodes</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.6.2</span>
+      <span class="toc-title" data-en="Picasso's Procedural Gesture" data-zh="毕加索的程序性姿态">Picasso's Procedural Gesture</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">3.6.3</span>
+      <span class="toc-title" data-en="Contemporary Hybrid Artworks with Digital Code" data-zh="当代数字代码混合艺术作品">Contemporary Hybrid Artworks with Digital Code</span>
+      <span class="toc-note" data-en="Cragg · Kapoor" data-zh="克拉格 · 卡普尔">Cragg · Kapoor</span>
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<section>
+  <h2 class="section-title" data-en="Scripts" data-zh="脚本">Scripts</h2>
+  <p class="section-sub"
+     data-en="Run directly in Blender 5.x (Scripting workspace) or via the Windows .bat launchers."
+     data-zh="可直接在Blender 5.x（脚本工作区）中运行，或通过Windows .bat启动器运行。">
+    Run directly in Blender 5.x (Scripting workspace) or via the Windows .bat launchers.
+  </p>
+
+  <div class="info-box">
+    <strong data-en="⚠️ Do not double-click the .py files directly" data-zh="⚠️ 请勿直接双击.py文件">⚠️ Do not double-click the .py files directly</strong>
+    <span data-en="These are Blender scripts — use the <code>.bat</code> launcher (Windows) or <code>.sh</code> launcher (macOS/Linux) in the same folder. Full instructions: "
+          data-zh="这些是Blender脚本——请使用同一文件夹中的 <code>.bat</code> 启动器（Windows）或 <code>.sh</code> 启动器（macOS/Linux）。完整说明：">
+      These are Blender scripts — use the <code>.bat</code> launcher (Windows) in the same folder. Full instructions:
+    </span>
+    <a href="../getting-started.html" data-en="Getting Started →" data-zh="使用指南 →">Getting Started →</a>
+  </div>
+
+  <div class="script-grid">
+
+    <div class="script-card">
+      <div class="env">Blender 5.x · §3.6.1.1</div>
+      <h3>organic_surface.py</h3>
+      <p data-en="Transforms a flat plane into an organic relief using Subdivision + Displace modifiers with procedural textures (Musgrave, Clouds, Voronoi). Evokes skin, geological terrain, or alien membranes."
+         data-zh="使用Subdivision + Displace修改器和程序纹理（Musgrave、Clouds、Voronoi）将平面转化为有机浮雕。唤起皮肤、地质地形或外星膜的质感。">
+        Transforms a flat plane into organic relief using procedural displacement. Texture type, strength, and subdivisions are all configurable.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/scripts/organic_surface.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+    <div class="script-card">
+      <div class="env">Blender 5.x · §3.6.1.2</div>
+      <h3>modular_patterns.py</h3>
+      <p data-en="Distributes sphere instances across a surface using Geometry Nodes instancing. Density is driven by a Noise Texture, shifting from ordered grids to organic clusters."
+         data-zh="使用几何节点实例化在表面分布球体。密度由噪波纹理驱动，从有序网格转变为有机聚集。">
+        Geometry Nodes instancing with noise-driven density control. Produces results from ordered grids to organic clusters.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/scripts/modular_patterns.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+    <div class="script-card">
+      <div class="env">Blender 5.x · §3.6.1.3</div>
+      <h3>lattice_structures.py</h3>
+      <p data-en="Converts solid icospheres into open frameworks recalling bone, coral, or architectural trusses. Two methods: Wireframe modifier and Voxel Remesh + Decimate. Side-by-side comparison available."
+         data-zh="将实心二十面体球转化为开放框架，让人联想到骨骼、珊瑚或建筑桁架。两种方法：线框修改器和体素重网格+精简。可并排比较。">
+        Wireframe modifier and Voxel Remesh compared side by side. Controls: strut thickness, voxel size, decimation ratio.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/scripts/lattice_structures.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+    <div class="script-card">
+      <div class="env">Blender 5.x · §3.6.1.5</div>
+      <h3>fluid_geometry.py</h3>
+      <p data-en="Animated noise deformation via Geometry Nodes and Scene Time. A 4D Noise Texture driven by the frame counter produces continuous ripples and fluid distortions. Exports as GLB for virtual exhibition platforms."
+         data-zh="通过几何节点和场景时间实现动画噪波变形。由帧计数器驱动的4D噪波纹理产生连续波纹和流体失真。可导出为GLB用于虚拟展览平台。">
+        120-frame fluid deformation animation. Press Space to play. Exportable as GLB for metaverse platforms.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/scripts/fluid_geometry.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+    <div class="script-card">
+      <div class="env">Blender 5.x · §3.3</div>
+      <h3>fibonacci_growth.py</h3>
+      <p data-en="Places mesh instances along a golden-angle (≈137.5°) distribution — the mathematical principle of sunflower seeds, pinecones, and nautilus shells. Gradient colouring from warm centre to cool outer."
+         data-zh="沿黄金角（约137.5°）分布网格实例——向日葵种子、松果和鹦鹉螺贝壳的数学原理。从温暖的中心到凉爽的外缘渐变着色。">
+        Golden-angle phyllotaxis spiral in 3D. Configurable elements, height, noise jitter, and module type (sphere / cube / cone).
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/scripts/fibonacci_growth.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+    <div class="script-card">
+      <div class="env">Blender 5.x · §3.6.2</div>
+      <h3>picasso_gesture.py</h3>
+      <p data-en="A Bézier curve given volume via bevel depth becomes a volumetric light trace animated with Trim Curve — drawing itself in 80 frames, echoing Picasso's 1949 light drawings with Gjon Mili in a darkened room."
+         data-zh="通过倒角深度赋予体积的贝塞尔曲线成为容积光迹，通过裁剪曲线在80帧内自我绘制——呼应毕加索1949年与贡·米利在暗室中的光迹绘画。">
+        Bézier gesture → glowing volumetric trace, 80-frame self-drawing animation. Dark world environment.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/scripts/picasso_gesture.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+    <div class="script-card">
+      <div class="env">Blender 5.x · §3.6.3.1</div>
+      <h3>cragg_stack.py</h3>
+      <p data-en="Stratified, torsional volumes inspired by Tony Cragg's <em>Stack</em> (2011): a bmesh torsion twist followed by Subdivision + Musgrave Displace. Optional 60-frame animation shows the displacement growing — a frozen moment of movement made editable."
+         data-zh="受托尼·克拉格《堆》（2011年）启发的层叠扭转体量：bmesh扭转后接Subdivision + Musgrave位移。可选60帧动画展示位移增长——一个可编辑的「冻结运动瞬间」。">
+        Layered torsional sculpture with animated displacement growth. Configurable twist angle and stratification depth.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/scripts/cragg_stack.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+    <div class="script-card">
+      <div class="env">Blender 5.x · §3.6.3.2</div>
+      <h3>kapoor_tall_tree.py</h3>
+      <p data-en="Procedural recreation of Anish Kapoor's <em>Tall Tree and the Eye</em> (2009, Guggenheim Bilbao): a vertical column of near-mirror spheres generated via Geometry Nodes or a Python loop — two methods compared side by side."
+         data-zh="程序性重现安尼施·卡普尔的《高树与眼》（2009年，毕尔巴鄂古根海姆）：通过几何节点或Python循环生成的近镜面球体垂直柱——两种方法并排比较。">
+        Column of mirrored spheres via Geometry Nodes or Python loop. Mirror finish, height, and sphere count configurable.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/scripts/kapoor_tall_tree.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+  </div>
+
+  <p style="margin-top:1rem;font-size:.85rem;color:var(--sub);">
+    <span data-en="Full parameter reference for all scripts:" data-zh="所有脚本的完整参数说明：">Full parameter reference for all scripts:</span>
+    <a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/scripts/README.md"
+       target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">
+      scripts/README.md ↗
+    </a>
+  </p>
+</section>
+
+<!-- 3D MODELS -->
+<section>
+  <h2 class="section-title" data-en="3D Models" data-zh="三维模型">3D Models</h2>
+  <p class="section-sub"
+     data-en="Blender scene files corresponding to the book figures. Open directly in Blender 5.x."
+     data-zh="与书中图表对应的Blender场景文件。直接在Blender 5.x中打开。">
+    Blender scene files corresponding to the book figures. Open directly in Blender 5.x.
+  </p>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="File" data-zh="文件">File</th>
+          <th data-en="Section" data-zh="章节">Section</th>
+          <th data-en="Description" data-zh="描述">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/3_6_1_1.blend" target="_blank" rel="noopener">3_6_1_1.blend</a></td>
+          <td>§3.6.1.1</td>
+          <td data-en="Organic surface — Plane + Subdivision + Displace (Fig. 14)" data-zh="有机表面——平面 + 细分 + 位移（图14）">Organic surface — Plane + Subdivision + Displace (Fig. 14)</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/3_6_1_2.blend" target="_blank" rel="noopener">3_6_1_2.blend</a></td>
+          <td>§3.6.1.2</td>
+          <td data-en="Modular patterns — Grid + Geometry Nodes instancing (Fig. 15)" data-zh="模块化图案——网格 + 几何节点实例化（图15）">Modular patterns — Grid + Geometry Nodes instancing (Fig. 15)</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/3_6_1_4.blend" target="_blank" rel="noopener">3_6_1_4.blend</a></td>
+          <td>§3.6.1.4</td>
+          <td data-en="Techno-mechanical — Displace with grayscale image height map (Fig. 17)" data-zh="技术机械风格——使用灰度图像高度图的位移（图17）">Techno-mechanical surface — Displace with grayscale image (Fig. 17)</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/3_6_1_5.blend" target="_blank" rel="noopener">3_6_1_5.blend</a></td>
+          <td>§3.6.1.5</td>
+          <td data-en="Fluid deformation — Icosphere + Geometry Nodes animation (Fig. 18)" data-zh="流体变形——二十面体球 + 几何节点动画（图18）">Fluid deformation — Icosphere + Geometry Nodes animation (Fig. 18)</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/Fibonacci.blend" target="_blank" rel="noopener">Fibonacci.blend</a></td>
+          <td>§3.3</td>
+          <td data-en="Fibonacci / golden-angle growth via Geometry Nodes (Fig. 10)" data-zh="通过几何节点实现的斐波那契/黄金角生长（图10）">Fibonacci / golden-angle growth via Geometry Nodes (Fig. 10)</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/Fillotassi.blend" target="_blank" rel="noopener">Fillotassi.blend</a></td>
+          <td>§3.5.2</td>
+          <td data-en="Phyllotaxis — six procedural variations from a single generative system (Figs. 12–13)" data-zh="叶序——来自单一生成系统的六种程序变体（图12–13）">Phyllotaxis — six procedural variations (Figs. 12–13)</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/Picasso.blend" target="_blank" rel="noopener">Picasso.blend</a></td>
+          <td>§3.6.2</td>
+          <td data-en="Gesture curve + Starlight Atmosphere environment ⚠️ requires add-on" data-zh="姿态曲线 + 星光大气环境 ⚠️ 需要插件">Gesture curve + Starlight Atmosphere environment ⚠️ requires add-on</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/Kapoor.blend" target="_blank" rel="noopener">Kapoor.blend</a></td>
+          <td>§3.6.3.2</td>
+          <td data-en="Tall Tree and the Eye — Geometry Nodes sphere column (Fig. 22)" data-zh="高树与眼——几何节点球体柱（图22）"><em>Tall Tree and the Eye</em> — Geometry Nodes sphere column (Fig. 22)</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/Cragg.blend" target="_blank" rel="noopener">Cragg.blend</a></td>
+          <td>§3.6.3.1</td>
+          <td data-en="Stack — Subdivision + Displace stratified surfaces (Fig. 20)" data-zh="堆——细分 + 位移层叠表面（图20）"><em>Stack</em> — Subdivision + Displace stratified surfaces (Fig. 20)</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/AggregatoCellulare.blend" target="_blank" rel="noopener">AggregatoCellulare.blend</a></td>
+          <td>§3.3</td>
+          <td data-en="Cellular aggregate — Icosphere + Geometry Nodes growth" data-zh="细胞聚合体——二十面体球 + 几何节点生长">Cellular aggregate — Geometry Nodes growth simulation</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/WireFlood.blend" target="_blank" rel="noopener">WireFlood.blend</a></td>
+          <td>§3.6.1.3</td>
+          <td data-en="Wire flood lattice via Geometry Nodes" data-zh="通过几何节点实现的线网洪流格架">Wire flood lattice via Geometry Nodes</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/Wires.blend" target="_blank" rel="noopener">Wires.blend</a></td>
+          <td>§3.6.1.3</td>
+          <td data-en="Wireframe mesh + Geometry Nodes" data-zh="线框网格 + 几何节点">Wireframe mesh + Geometry Nodes</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/03/models/GeoNodes_001.blend" target="_blank" rel="noopener">GeoNodes_001.blend</a></td>
+          <td>§3.6.1.2</td>
+          <td data-en="Geometry Nodes introductory study" data-zh="几何节点入门研究">Geometry Nodes introductory study</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p data-en="&copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0"
+     data-zh="&copy; 2025 莫伊奥利 · Apress / Springer Nature · CC BY-NC 4.0">
+    &copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0
+  </p>
+  <p style="margin-top:.4rem">
+    <a href="../index.html" data-en="Back to home" data-zh="返回首页">Back to home</a>
+  </p>
+</footer>
+
+<script src="../js/i18n.js"></script>
+</body>
+</html>
