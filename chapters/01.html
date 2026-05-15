@@ -430,16 +430,56 @@
         <strong>Workflow note:</strong> designed to run <em>in the same Blender session</em> as <code>fontana_cut.py</code>. It removes only the default startup objects (Cube, Camera, Light) and leaves the FontanaCanvas untouched — both scripts can coexist in one scene.
       </div>
     </div>
+    <!-- ── reproduction_matrix.py ── -->
     <div class="script-card">
-      <div class="env">Python 3 (no deps)</div>
-      <h3>aura_transition.py</h3>
-      <p data-en="Generates the aura/reproducibility diagram as SVG — pure Python, no external libraries. Opens automatically in browser."
-         data-zh="将"灵光/复制"图表生成为SVG——纯Python，无需额外库，自动在浏览器中打开。">
-        Generates the aura/reproducibility diagram as SVG — pure Python, no external libraries.
+      <div class="script-card-header">
+        <div class="env">Blender 5.x</div>
+        <h3>reproduction_matrix.py</h3>
+        <a class="dl-link"
+           href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/reproduction_matrix.py"
+           target="_blank" rel="noopener">↗ View on GitHub</a>
+      </div>
+      <p class="what"
+         data-en="A three-dimensional visualisation of Walter Benjamin's thesis on the aura of the artwork. A row of objects represents successive generations of reproduction: the leftmost is the unique original — pristine form, warm amber material, full aura. Moving right, Musgrave procedural noise displaces the surface progressively, eroding the form until the last copy is unrecognisable. Material colour shifts from warm ochre to cold blue-grey, mapping temperature to the presence or absence of aura."
+         data-zh="对沃尔特·本雅明《机械复制时代的艺术作品》论点的三维可视化。一排对象代表连续复制的世代：最左侧是独一无二的原作——形态完整，材质温暖，灵光完整。向右移动，穆斯格雷夫程序噪波逐步扭曲表面，直至最后一个副本面目全非。材质颜色从暖赭色渐变为冷蓝灰色，以温度映射灵光的有无。">
+        A three-dimensional visualisation of Walter Benjamin's thesis: a row of objects representing successive generations of reproduction. The original (left) is pristine — warm amber, full aura. Moving right, Musgrave noise erodes the form progressively. Material colour shifts from warm ochre to cold blue-grey — temperature mapping the presence or absence of aura.
       </p>
-      <a class="dl-link"
-         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/aura_transition.py"
-         target="_blank" rel="noopener">↗ View on GitHub</a>
+      <table class="param-table">
+        <thead>
+          <tr>
+            <th data-en="Parameter" data-zh="参数">Parameter</th>
+            <th data-en="Default" data-zh="默认值">Default</th>
+            <th data-en="Description" data-zh="说明">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>NUM_COPIES</code></td>
+            <td><code>7</code></td>
+            <td class="pdesc" data-en="Total objects in the matrix (original + N−1 reproductions)" data-zh="矩阵中的对象总数（原作 + N−1 个副本）">Total objects — original + N−1 reproductions</td>
+          </tr>
+          <tr>
+            <td><code>BASE_FORM</code></td>
+            <td><code>"sphere"</code></td>
+            <td class="pdesc" data-en="Starting shape: sphere | cube | torus" data-zh="起始形状：sphere（球体）| cube（立方体）| torus（圆环）"><code>"sphere"</code> · <code>"cube"</code> · <code>"torus"</code></td>
+          </tr>
+          <tr>
+            <td><code>MAX_NOISE</code></td>
+            <td><code>0.55</code></td>
+            <td class="pdesc" data-en="Maximum displacement strength on the last copy — 0.0 = identical copies" data-zh="最后一个副本的最大位移强度——0.0 = 完全相同的副本">Displacement strength at the last generation</td>
+          </tr>
+          <tr>
+            <td><code>SPACING</code></td>
+            <td><code>1.6</code></td>
+            <td class="pdesc" data-en="Distance between objects in Blender units" data-zh="对象之间的距离（Blender单位）">Distance between objects in Blender units</td>
+          </tr>
+          <tr>
+            <td><code>SEED</code></td>
+            <td><code>17</code></td>
+            <td class="pdesc" data-en="Random seed — each seed produces a different degradation path" data-zh="随机种子——不同的种子产生不同的退化路径">Random seed — change to explore degradation variants</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
