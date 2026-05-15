@@ -258,6 +258,36 @@ section {
   margin-bottom: .8rem;
 }
 
+/* ── INFO BOX ───────────────────────────────────────────────── */
+.info-box {
+  background: #f0f5fb;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0 1.8rem;
+  font-size: .87rem;
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+.info-box strong {
+  display: block;
+  color: var(--accent);
+  font-size: .78rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: .4rem;
+}
+
+.info-box code {
+  background: rgba(44,95,138,.1);
+  color: var(--accent);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: .85em;
+  font-family: "Consolas", "Courier New", monospace;
+}
+
 /* ── FOOTER ─────────────────────────────────────────────────── */
 footer {
   border-top: 1px solid var(--border);
