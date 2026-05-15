@@ -258,6 +258,64 @@ section {
   margin-bottom: .8rem;
 }
 
+/* ── TABLE OF CONTENTS ──────────────────────────────────────── */
+.toc {
+  margin-top: 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.toc-part {
+  background: var(--accent);
+  padding: .6rem 1.2rem;
+}
+
+.toc-part-label {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.toc-item {
+  display: flex;
+  align-items: baseline;
+  gap: .8rem;
+  padding: .55rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  transition: background .15s;
+}
+
+.toc-item:last-child { border-bottom: none; }
+.toc-item:hover { background: #f5f5f2; }
+
+.toc-l1 { background: var(--tag-bg); }
+.toc-l1 .toc-num { color: var(--accent2); font-weight: 700; }
+.toc-l1 .toc-title { font-weight: 600; color: var(--ink); }
+
+.toc-l2 { padding-left: 2.4rem; }
+.toc-l2 .toc-num { color: var(--accent); font-weight: 600; }
+.toc-l2 .toc-title { color: var(--ink); }
+
+.toc-num {
+  font-size: .8rem;
+  min-width: 3rem;
+  flex-shrink: 0;
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+.toc-title { font-size: .92rem; line-height: 1.4; }
+
+.toc-note {
+  margin-left: auto;
+  font-size: .75rem;
+  color: var(--sub);
+  white-space: nowrap;
+  padding-left: .8rem;
+}
+
 /* ── INFO BOX ───────────────────────────────────────────────── */
 .info-box {
   background: #f0f5fb;
