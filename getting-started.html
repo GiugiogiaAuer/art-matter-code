@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started — Art Between Matter and Code</title>
+  <meta name="description" content="How to download and run the scripts and 3D models from Art Between Matter and Code by Gianpiero Moioli.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gs-hero {
+      max-width: var(--max);
+      margin: 4rem auto 2rem;
+      padding: 0 2rem;
+    }
+    .gs-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      margin-bottom: .6rem;
+    }
+    .gs-hero .lead {
+      font-size: 1rem;
+      color: var(--sub);
+      max-width: 640px;
+    }
+
+    .gs-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.6rem 2rem;
+      margin-bottom: 1.4rem;
+    }
+    .gs-block h2 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--ink);
+      margin-bottom: .8rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--accent2);
+      display: inline-block;
+    }
+    .gs-block p {
+      font-size: .93rem;
+      color: var(--sub);
+      line-height: 1.75;
+      margin-bottom: .7rem;
+    }
+    .gs-block p:last-child { margin-bottom: 0; }
+
+    .gs-steps {
+      list-style: none;
+      counter-reset: step;
+      margin: .5rem 0 0;
+    }
+    .gs-steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: .9rem;
+      font-size: .93rem;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .gs-steps li::before {
+      content: counter(step);
+      min-width: 1.6rem;
+      height: 1.6rem;
+      background: var(--accent);
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+
+    .os-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .os-card {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+    .os-card h3 {
+      font-size: 1rem;
+      margin-bottom: .6rem;
+      color: var(--ink);
+    }
+    .os-card p {
+      font-size: .87rem;
+      color: var(--sub);
+      line-height: 1.65;
+      margin-bottom: .5rem;
+    }
+    .os-card p:last-child { margin-bottom: 0; }
+    .os-card code {
+      background: rgba(44,95,138,.1);
+      color: var(--accent);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: .85em;
+      font-family: "Consolas", "Courier New", monospace;
+    }
+
+    .tip {
+      background: #f0f7ee;
+      border-left: 4px solid #5a9e6f;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: .8rem 1.1rem;
+      font-size: .87rem;
+      color: var(--ink);
+      line-height: 1.65;
+      margin-top: 1rem;
+    }
+    .tip strong { color: #3d7a52; }
+
+    @media (max-width: 700px) {
+      .os-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Art Between Matter and Code</span>
+  <ul class="nav-links">
+    <li><a href="index.html" data-en="Home" data-zh="首页">Home</a></li>
+    <li><a href="index.html#chapters" data-en="Chapters" data-zh="章节">Chapters</a></li>
+    <li><a href="getting-started.html" data-en="Getting Started" data-zh="使用指南">Getting Started</a></li>
+    <li><a href="index.html#about" data-en="Author" data-zh="作者">Author</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="gs-hero">
+  <a class="back-link" href="index.html">← <span data-en="Home" data-zh="首页">Home</span></a>
+  <h1 data-en="Getting Started" data-zh="使用指南">Getting Started</h1>
+  <p class="lead"
+     data-en="How to download the materials and run the scripts — no programming experience required."
+     data-zh="如何下载材料并运行脚本——无需编程经验。">
+    How to download the materials and run the scripts — no programming experience required.
+  </p>
+</div>
+
+<!-- STEP 1: Download -->
+<section>
+  <div class="gs-block">
+    <h2 data-en="1 — Download the materials" data-zh="1 — 下载材料">1 — Download the materials</h2>
+    <p data-en="All files are freely available on GitHub. You can download everything at once or just the chapter you need."
+       data-zh="所有文件均可在GitHub上免费获取。您可以一次性下载所有内容，也可以只下载您需要的章节。">
+      All files are freely available on GitHub. You can download everything at once or just the chapter you need.
+    </p>
+    <ol class="gs-steps">
+      <li>
+        <span data-en="Go to the repository: <a href='https://github.com/Apress/Art-Between-Matter-and-Code' target='_blank' rel='noopener'>github.com/Apress/Art-Between-Matter-and-Code</a>"
+              data-zh="访问代码库：<a href='https://github.com/Apress/Art-Between-Matter-and-Code' target='_blank' rel='noopener'>github.com/Apress/Art-Between-Matter-and-Code</a>">
+          Go to the repository: <a href="https://github.com/Apress/Art-Between-Matter-and-Code" target="_blank" rel="noopener">github.com/Apress/Art-Between-Matter-and-Code</a>
+        </span>
+      </li>
+      <li>
+        <span data-en="Click the green <strong>Code</strong> button → <strong>Download ZIP</strong>. This downloads all chapters at once."
+              data-zh="点击绿色的 <strong>Code</strong> 按钮 → <strong>Download ZIP</strong>。这将一次性下载所有章节。">
+          Click the green <strong>Code</strong> button → <strong>Download ZIP</strong>. This downloads all chapters at once.
+        </span>
+      </li>
+      <li>
+        <span data-en="Unzip the file. Each chapter has its own folder (<code>01/</code>, <code>02/</code>, …) with subfolders for images, scripts, models, and documents."
+              data-zh="解压文件。每个章节都有自己的文件夹（<code>01/</code>、<code>02/</code>……），其中包含图像、脚本、模型和文档的子文件夹。">
+          Unzip the file. Each chapter has its own folder (<code>01/</code>, <code>02/</code>, …) with subfolders for images, scripts, models, and documents.
+        </span>
+      </li>
+    </ol>
+  </div>
+
+  <!-- STEP 2: Install Blender -->
+  <div class="gs-block">
+    <h2 data-en="2 — Install Blender" data-zh="2 — 安装Blender">2 — Install Blender</h2>
+    <p data-en="All 3D scripts require Blender 5.x. Download it for free from the official site."
+       data-zh="所有3D脚本需要Blender 5.x。从官方网站免费下载。">
+      All 3D scripts require Blender 5.x. Download it for free from the official site.
+    </p>
+    <p>
+      <a class="btn btn-primary" href="https://www.blender.org/download/" target="_blank" rel="noopener"
+         data-en="Download Blender" data-zh="下载Blender">Download Blender</a>
+    </p>
+    <div class="tip">
+      <strong data-en="Already have Blender?" data-zh="已经安装了Blender？">Already have Blender?</strong>
+      <span data-en=" Version 4.2 or later also works. The launchers automatically detect whichever version you have installed."
+            data-zh=" 版本4.2或更高版本也可使用。启动器会自动检测您已安装的版本。">
+        &nbsp;Version 4.2 or later also works. The launchers automatically detect whichever version you have installed.
+      </span>
+    </div>
+  </div>
+
+  <!-- STEP 3: Run scripts -->
+  <div class="gs-block">
+    <h2 data-en="3 — Run a script" data-zh="3 — 运行脚本">3 — Run a script</h2>
+    <p data-en="Each chapter's <code>scripts/</code> folder contains Python files (<code>.py</code>) and launchers. <strong>Do not double-click the .py files directly</strong> — they are Blender scripts and will not work with regular Python. Use the launchers instead."
+       data-zh="每个章节的 <code>scripts/</code> 文件夹包含Python文件（<code>.py</code>）和启动器。<strong>请勿直接双击.py文件</strong>——它们是Blender脚本，无法在普通Python中运行。请使用启动器。">
+      Each chapter's <code>scripts/</code> folder contains Python files (<code>.py</code>) and launchers. <strong>Do not double-click the .py files directly</strong> — they are Blender scripts and will not work with regular Python. Use the launchers instead.
+    </p>
+
+    <div class="os-grid">
+      <div class="os-card">
+        <h3>🪟 Windows</h3>
+        <p data-en="Double-click the <code>.bat</code> file in the same folder as the script. A black window opens briefly, then Blender launches with the scene already generated."
+           data-zh="双击脚本同一文件夹中的 <code>.bat</code> 文件。黑色窗口短暂出现，然后Blender启动并自动生成场景。">
+          Double-click the <code>.bat</code> file in the same folder as the script. A black window opens briefly, then Blender launches with the scene already generated.
+        </p>
+        <p data-en="Example: to run <code>fontana_cut.py</code>, double-click <code>run_fontana_cut.bat</code>."
+           data-zh="示例：要运行 <code>fontana_cut.py</code>，双击 <code>run_fontana_cut.bat</code>。">
+          Example: to run <code>fontana_cut.py</code>, double-click <code>run_fontana_cut.bat</code>.
+        </p>
+      </div>
+      <div class="os-card">
+        <h3>🍎 macOS &nbsp;/&nbsp; 🐧 Linux</h3>
+        <p data-en="Double-click the <code>.sh</code> file. The first time only, the system may ask for permission to run it: right-click → Open With → Terminal, and confirm."
+           data-zh="双击 <code>.sh</code> 文件。仅第一次时，系统可能会要求运行权限：右键单击 → 打开方式 → 终端，然后确认。">
+          Double-click the <code>.sh</code> file. The first time only, the system may ask for permission: right-click → Open With → Terminal, and confirm.
+        </p>
+        <p data-en="Example: to run <code>fontana_cut.py</code>, double-click <code>run_fontana_cut.sh</code>."
+           data-zh="示例：要运行 <code>fontana_cut.py</code>，双击 <code>run_fontana_cut.sh</code>。">
+          Example: to run <code>fontana_cut.py</code>, double-click <code>run_fontana_cut.sh</code>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4: Inside Blender -->
+  <div class="gs-block">
+    <h2 data-en="4 — Open a script inside Blender" data-zh="4 — 在Blender内部打开脚本">4 — Open a script inside Blender</h2>
+    <p data-en="You can also run and edit scripts directly from inside Blender, without the launchers."
+       data-zh="您也可以直接在Blender内部运行和编辑脚本，无需启动器。">
+      You can also run and edit scripts directly from inside Blender, without the launchers.
+    </p>
+    <ol class="gs-steps">
+      <li><span data-en="Open Blender." data-zh="打开Blender。">Open Blender.</span></li>
+      <li><span data-en="Click the <strong>Scripting</strong> tab at the top of the screen." data-zh="点击屏幕顶部的 <strong>Scripting</strong>（脚本）选项卡。">Click the <strong>Scripting</strong> tab at the top of the screen.</span></li>
+      <li><span data-en="Click <strong>Open</strong> and select the <code>.py</code> file from the chapter's <code>scripts/</code> folder." data-zh="点击 <strong>Open</strong>（打开），从章节的 <code>scripts/</code> 文件夹中选择 <code>.py</code> 文件。">Click <strong>Open</strong> and select the <code>.py</code> file from the chapter's <code>scripts/</code> folder.</span></li>
+      <li><span data-en="Press <strong>Alt + P</strong> (or click the ▶ Run Script button) to execute it." data-zh="按 <strong>Alt + P</strong>（或点击 ▶ 运行脚本按钮）执行脚本。">Press <strong>Alt + P</strong> (or click the ▶ Run Script button) to execute it.</span></li>
+    </ol>
+    <div class="tip">
+      <strong data-en="Tip:" data-zh="提示：">Tip:</strong>
+      <span data-en=" Each script has a CONFIG block at the top where you can change parameters (number of cuts, grid density, amplitude…) before running."
+            data-zh=" 每个脚本顶部都有一个CONFIG配置块，您可以在运行前更改参数（切割数量、网格密度、振幅……）。">
+        &nbsp;Each script has a CONFIG block at the top where you can change parameters (number of cuts, grid density, amplitude…) before running.
+      </span>
+    </div>
+  </div>
+
+  <!-- STEP 5: Open .blend files -->
+  <div class="gs-block">
+    <h2 data-en="5 — Open a .blend scene" data-zh="5 — 打开.blend场景">5 — Open a .blend scene</h2>
+    <p data-en="Each chapter's <code>models/</code> folder contains ready-made Blender scenes (<code>.blend</code> files). Open them directly in Blender: <strong>File → Open</strong> → select the <code>.blend</code> file."
+       data-zh="每个章节的 <code>models/</code> 文件夹包含现成的Blender场景（<code>.blend</code> 文件）。直接在Blender中打开：<strong>文件 → 打开</strong> → 选择 <code>.blend</code> 文件。">
+      Each chapter's <code>models/</code> folder contains ready-made Blender scenes (<code>.blend</code> files). Open them directly in Blender: <strong>File → Open</strong> → select the <code>.blend</code> file.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p data-en="© 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0"
+     data-zh="© 2025 莫伊奥利 · Apress / Springer Nature · CC BY-NC 4.0">
+    © 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0
+  </p>
+  <p style="margin-top:.4rem">
+    <a href="index.html" data-en="Back to home" data-zh="返回首页">Back to home</a>
+  </p>
+</footer>
+
+<script src="js/i18n.js"></script>
+</body>
+</html>
