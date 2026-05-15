@@ -209,10 +209,23 @@
   </p>
 
   <div class="info-box">
-    <strong data-en="How to use the .bat launchers (Windows)" data-zh="如何使用 .bat 启动器（Windows）">How to use the .bat launchers (Windows)</strong>
-    <span data-en="Each script comes with a <code>.bat</code> file — a Windows launcher you can double-click directly from File Explorer. It automatically finds Blender on your computer (trying version 5.1, 5.0, 4.x in order) and runs the script without opening a terminal. No command line needed: just double-click <code>run_piazza_metafisica.bat</code> and Blender opens with the scene already generated."
-          data-zh="每个脚本都附带一个 <code>.bat</code> 文件——这是一个Windows启动器，可以直接在文件资源管理器中双击运行。它会自动在您的计算机上查找Blender（按5.1、5.0、4.x的顺序尝试），无需打开终端即可运行脚本。无需命令行：只需双击 <code>run_piazza_metafisica.bat</code>，Blender就会自动打开并生成场景。">
-      Each script comes with a <code>.bat</code> file — a Windows launcher you can double-click directly from File Explorer. It automatically finds Blender on your computer (trying version 5.1, 5.0, 4.x in order) and runs the script without opening a terminal. No command line needed: just double-click <code>run_piazza_metafisica.bat</code> and Blender opens with the scene already generated.
+    <strong data-en="🪟 Windows — .bat launchers" data-zh="🪟 Windows — .bat 启动器">🪟 Windows — .bat launchers</strong>
+    <span data-en="Each script comes with a <code>.bat</code> file you can double-click directly from File Explorer. It automatically finds Blender on your computer (trying version 5.1, 5.0, 4.x in order) and runs the script — no terminal needed. Example: double-click <code>run_piazza_metafisica.bat</code> and Blender opens with the scene already generated."
+          data-zh="每个脚本都附带一个 <code>.bat</code> 文件，可直接在文件资源管理器中双击运行。它会自动查找Blender（按5.1、5.0、4.x顺序），无需打开终端。示例：双击 <code>run_piazza_metafisica.bat</code>，Blender会自动打开并生成场景。">
+      Each script comes with a <code>.bat</code> file you can double-click directly from File Explorer. It automatically finds Blender (trying 5.1, 5.0, 4.x in order) and runs the script — no terminal needed. Example: double-click <code>run_piazza_metafisica.bat</code> and Blender opens with the scene already generated.
+    </span>
+    <br><br>
+    <strong data-en="🍎 macOS / 🐧 Linux — Terminal" data-zh="🍎 macOS / 🐧 Linux — 终端">🍎 macOS / 🐧 Linux — Terminal</strong>
+    <span data-en="No <code>.bat</code> files on Mac or Linux. Open a Terminal, navigate to the script folder, and run:"
+          data-zh="Mac或Linux上没有 <code>.bat</code> 文件。打开终端，进入脚本文件夹，运行：">
+      No <code>.bat</code> files on Mac or Linux. Open a Terminal, navigate to the script folder, and run:
+    </span>
+    <br>
+    <code style="display:inline-block;margin:.5rem 0;background:rgba(44,95,138,.08);padding:6px 10px;border-radius:4px;font-size:.82rem;">blender --python piazza_metafisica.py</code>
+    <br>
+    <span data-en="Replace <code>blender</code> with the full path if it is not in your PATH — e.g. on macOS: <code>/Applications/Blender.app/Contents/MacOS/Blender --python piazza_metafisica.py</code>"
+          data-zh="如果 <code>blender</code> 不在PATH中，请替换为完整路径——例如在macOS上：<code>/Applications/Blender.app/Contents/MacOS/Blender --python piazza_metafisica.py</code>">
+      Replace <code>blender</code> with the full path if it is not in your PATH — e.g. on macOS: <code>/Applications/Blender.app/Contents/MacOS/Blender --python piazza_metafisica.py</code>
     </span>
   </div>
 
