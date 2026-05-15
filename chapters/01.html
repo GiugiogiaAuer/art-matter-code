@@ -78,15 +78,19 @@
     /* ── Script cards ── */
     .script-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.4rem;
       margin-top: 1rem;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .script-grid { grid-template-columns: 1fr; }
     }
     .script-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.4rem 1.6rem;
+      padding: 1.2rem 1.3rem;
     }
     .script-card-header {
       display: flex;
@@ -116,10 +120,10 @@
       white-space: nowrap;
     }
     .script-card .what {
-      font-size: .9rem;
+      font-size: .84rem;
       color: var(--ink);
-      line-height: 1.65;
-      margin-bottom: .9rem;
+      line-height: 1.6;
+      margin-bottom: .8rem;
     }
     .script-card .what em { color: var(--accent2); font-style: normal; font-weight: 600; }
     .param-table {
