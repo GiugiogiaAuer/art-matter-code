@@ -296,195 +296,42 @@
 
   <div class="script-grid">
 
-    <!-- ── fontana_cut.py ── -->
     <div class="script-card">
-      <div class="script-card-header">
-        <div class="env">Blender 5.x</div>
-        <h3>fontana_cut.py</h3>
-        <a class="dl-link"
-           href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/fontana_cut.py"
-           target="_blank" rel="noopener">↗ View on GitHub</a>
-      </div>
-      <p class="what"
-         data-en="A procedural reinterpretation of Lucio Fontana's <em>Concetto Spaziale</em>. The script builds a vertical linen canvas (a thin manifold cube) and carves into it a series of organic cuts using Blender's boolean DIFFERENCE modifier. Each blade is a custom bmesh volume: its spine follows a gentle sine curve, the width tapers to zero at both tips, and each edge carries independent noise — reproducing the <em>slabbrato</em>, the frayed, torn quality of a real Fontana cut. Run it from the Scripting workspace or via the included launcher."
-         data-zh="对卢乔·丰塔纳《空间概念》的程序化重新诠释。脚本构建一块垂直亚麻画布（薄实体方块），并通过Blender的布尔差集修改器刻入一系列有机切口。每个刀刃是自定义bmesh体积：脊线沿正弦曲线弯曲，宽度在两端渐变为零，两侧边缘各自带有噪波——再现真实丰塔纳切口的<em>slabbrato</em>（撕裂、毛边）质感。">
-        A procedural reinterpretation of Lucio Fontana's <em>Concetto Spaziale</em>. The script builds a vertical linen canvas (a thin manifold cube) and carves into it a series of organic cuts using Blender's boolean DIFFERENCE modifier. Each blade is a custom bmesh volume: its spine follows a gentle sine curve, the width tapers to zero at both tips, and each edge carries independent noise — reproducing the <em>slabbrato</em>, the frayed, torn quality of a real Fontana cut.
+      <div class="env">Blender 5.x</div>
+      <h3>fontana_cut.py</h3>
+      <p data-en="Parametric reinterpretation of Fontana's <em>Concetto Spaziale</em>: organic boolean cuts — curved, tapered, frayed — carved into a linen canvas. Parameters: number of cuts, angle, spacing mode (<code>even</code> · <code>random</code> · <code>golden</code>)."
+         data-zh="丰塔纳《空间概念》的参数化重新诠释：有机布尔切口（弯曲、渐变、毛边）刻入亚麻画布。参数：切口数量、角度、间距模式（均匀·随机·黄金比例）。">
+        Parametric reinterpretation of Fontana's <em>Concetto Spaziale</em>: organic boolean cuts — curved, tapered, frayed — carved into a linen canvas. Parameters: number of cuts, angle, spacing mode (<code>even</code> · <code>random</code> · <code>golden</code>).
       </p>
-      <table class="param-table">
-        <thead>
-          <tr>
-            <th data-en="Parameter" data-zh="参数">Parameter</th>
-            <th data-en="Default" data-zh="默认值">Default</th>
-            <th data-en="Description" data-zh="说明">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>NUM_CUTS</code></td>
-            <td><code>5</code></td>
-            <td class="pdesc" data-en="Number of cuts (Fontana used 1–7)" data-zh="切口数量（丰塔纳常用1–7）">Number of cuts — Fontana typically used 1–7</td>
-          </tr>
-          <tr>
-            <td><code>CUT_ANGLE</code></td>
-            <td><code>10.0°</code></td>
-            <td class="pdesc" data-en="Slight lean of each blade from vertical (alternates ±)" data-zh="每个刀刃相对垂直方向的轻微倾斜（正负交替）">Slight lean from vertical — alternates ±</td>
-          </tr>
-          <tr>
-            <td><code>CUT_DEPTH</code></td>
-            <td><code>0.08</code></td>
-            <td class="pdesc" data-en="How far the blade protrudes through the canvas (Y axis)" data-zh="刀刃穿透画布的深度（Y轴）">Depth the blade protrudes through the canvas</td>
-          </tr>
-          <tr>
-            <td><code>CUT_WIDTH</code></td>
-            <td><code>0.015</code></td>
-            <td class="pdesc" data-en="Blade thickness — thin = sharp cut, wider = torn gap" data-zh="刀刃厚度——越薄切口越锐利">Blade thickness — thin = sharp cut, wider = torn gap</td>
-          </tr>
-          <tr>
-            <td><code>CUT_LENGTH</code></td>
-            <td><code>0.72</code></td>
-            <td class="pdesc" data-en="Cut length as fraction of canvas height (0.0–1.0)" data-zh="切口长度占画布高度的比例（0.0–1.0）">Cut length as fraction of canvas height</td>
-          </tr>
-          <tr>
-            <td><code>CANVAS_SIZE</code></td>
-            <td><code>2.0</code></td>
-            <td class="pdesc" data-en="Canvas half-extent in Blender units (total = 2 × this)" data-zh="画布半径（总尺寸 = 2 × 此值）">Canvas half-extent in Blender units</td>
-          </tr>
-          <tr>
-            <td><code>SPACING</code></td>
-            <td><code>"even"</code></td>
-            <td class="pdesc" data-en="Cut distribution: even | random | golden ratio" data-zh="切口间距模式：均匀 | 随机 | 黄金比例"><code>"even"</code> · <code>"random"</code> · <code>"golden"</code></td>
-          </tr>
-          <tr>
-            <td><code>SEED</code></td>
-            <td><code>42</code></td>
-            <td class="pdesc" data-en="Random seed — change to explore different organic variations" data-zh="随机种子——改变此值可探索不同的有机变体">Random seed for reproducible organic variations</td>
-          </tr>
-        </tbody>
-      </table>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/fontana_cut.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
     </div>
 
-    <!-- ── parametric_space.py ── -->
     <div class="script-card">
-      <div class="script-card-header">
-        <div class="env">Blender 5.x</div>
-        <h3>parametric_space.py</h3>
-        <a class="dl-link"
-           href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/parametric_space.py"
-           target="_blank" rel="noopener">↗ View on GitHub</a>
-      </div>
-      <p class="what"
-         data-en="Translates the chapter's central idea — <em>space as a generative field</em> — into geometry. A dense grid of vertices is deformed by a mathematical field equation, producing a membrane that ripples, bends, and expands as if responding to an energy source. Three field profiles are available: <em>radial</em> (concentric rings, like the spatial energy radiating from a Fontana cut), <em>linear</em> (directional wave, like a single incision), and <em>turbulent</em> (procedural multi-octave noise for organic, unpredictable surfaces). An optional Solidify modifier makes the result print-ready."
-         data-zh="将本章核心概念——<em>空间作为生成场</em>——转化为几何体。一组密集顶点网格被数学场方程变形，产生如同响应能量源而起伏、弯曲、扩展的薄膜。三种场模式可选：<em>径向</em>（同心环，如丰塔纳切口辐射的空间能量）、<em>线性</em>（方向性波，如单一切口）和<em>湍流</em>（程序化多八度噪波，产生有机不规则曲面）。可选的实体化修改器使结果可直接用于3D打印。">
-        Translates the chapter's central idea — <em>space as a generative field</em> — into geometry. A dense grid of vertices is deformed by a mathematical field equation, producing a membrane that ripples, bends, and expands as if responding to an energy source. Three field profiles: <em>radial</em> (concentric rings, Fontana-like), <em>linear</em> (directional wave), <em>turbulent</em> (procedural noise, organic surface). Optional Solidify makes the result print-ready.
+      <div class="env">Blender 5.x</div>
+      <h3>parametric_space.py</h3>
+      <p data-en="Space as a generative field: a vertex grid deformed by a mathematical equation. Three profiles — <code>radial</code> (concentric, Fontana-like), <code>linear</code> (directional wave), <code>turbulent</code> (procedural noise). Runs in the same session as <code>fontana_cut.py</code>."
+         data-zh="空间作为生成场：由数学方程变形的顶点网格。三种模式——径向（同心，丰塔纳风格）、线性（方向波）、湍流（程序噪波）。可与fontana_cut.py在同一会话中运行。">
+        Space as a generative field: a vertex grid deformed by a mathematical equation. Three profiles — <code>radial</code> (concentric, Fontana-like), <code>linear</code> (directional wave), <code>turbulent</code> (procedural noise). Runs in the same session as <code>fontana_cut.py</code>.
       </p>
-      <table class="param-table">
-        <thead>
-          <tr>
-            <th data-en="Parameter" data-zh="参数">Parameter</th>
-            <th data-en="Default" data-zh="默认值">Default</th>
-            <th data-en="Description" data-zh="说明">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>GRID_DENSITY</code></td>
-            <td><code>40</code></td>
-            <td class="pdesc" data-en="Vertices per side — 40 = 1 600 points (resolution of the spatial fabric)" data-zh="每边顶点数——40 = 1600个点（空间织物的分辨率）">Vertices per side — 40 = 1 600 points</td>
-          </tr>
-          <tr>
-            <td><code>GRID_SIZE</code></td>
-            <td><code>4.0</code></td>
-            <td class="pdesc" data-en="Total extent of the field in Blender units" data-zh="场的总范围（Blender单位）">Total extent in Blender units</td>
-          </tr>
-          <tr>
-            <td><code>WAVE_AMPLITUDE</code></td>
-            <td><code>0.35</code></td>
-            <td class="pdesc" data-en="Height of the field deformation — spatial energy intensity" data-zh="场变形高度——空间能量强度">Height of field deformation — energy intensity</td>
-          </tr>
-          <tr>
-            <td><code>WAVE_FREQUENCY</code></td>
-            <td><code>2.5</code></td>
-            <td class="pdesc" data-en="Oscillation cycles across the grid — compression of spatial rhythm" data-zh="网格上的振荡周期——空间节奏的密度">Oscillation cycles — compression of spatial rhythm</td>
-          </tr>
-          <tr>
-            <td><code>FIELD_PROFILE</code></td>
-            <td><code>"radial"</code></td>
-            <td class="pdesc" data-en="Field shape: radial (concentric) | linear (directional) | turbulent (noise)" data-zh="场形状：radial（同心）| linear（方向）| turbulent（噪波）"><code>"radial"</code> · <code>"linear"</code> · <code>"turbulent"</code></td>
-          </tr>
-          <tr>
-            <td><code>NOISE_SCALE</code></td>
-            <td><code>1.8</code></td>
-            <td class="pdesc" data-en="Turbulence detail scale (active when FIELD_PROFILE = "turbulent")" data-zh="湍流细节比例（FIELD_PROFILE = "turbulent" 时生效）">Turbulence detail scale — turbulent mode only</td>
-          </tr>
-          <tr>
-            <td><code>SOLIDIFY</code></td>
-            <td><code>True</code></td>
-            <td class="pdesc" data-en="Add thickness to the surface (print/fabrication ready)" data-zh="为曲面添加厚度（适合打印/制造）">Add thickness — makes the surface print-ready</td>
-          </tr>
-          <tr>
-            <td><code>EMIT_PARTICLES</code></td>
-            <td><code>False</code></td>
-            <td class="pdesc" data-en="Add a particle system to visualise energy propagation" data-zh="添加粒子系统以可视化能量传播">Particle system — visualise energy propagation</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="workflow-note"
-           data-en="<strong>Workflow note:</strong> this script is designed to run <em>in the same Blender session</em> as <code>fontana_cut.py</code>. It removes only the default startup objects (Cube, Camera, Light) and leaves the FontanaCanvas untouched — so both scripts can coexist in one scene."
-           data-zh="<strong>工作流提示：</strong>此脚本设计为与 <code>fontana_cut.py</code> <em>在同一Blender会话中</em>运行。它只移除默认启动对象（Cube、Camera、Light），不会删除FontanaCanvas——两个脚本可共存于同一场景中。">
-        <strong>Workflow note:</strong> designed to run <em>in the same Blender session</em> as <code>fontana_cut.py</code>. It removes only the default startup objects (Cube, Camera, Light) and leaves the FontanaCanvas untouched — both scripts can coexist in one scene.
-      </div>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/parametric_space.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
     </div>
-    <!-- ── reproduction_matrix.py ── -->
+
     <div class="script-card">
-      <div class="script-card-header">
-        <div class="env">Blender 5.x</div>
-        <h3>reproduction_matrix.py</h3>
-        <a class="dl-link"
-           href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/reproduction_matrix.py"
-           target="_blank" rel="noopener">↗ View on GitHub</a>
-      </div>
-      <p class="what"
-         data-en="A three-dimensional visualisation of Walter Benjamin's thesis on the aura of the artwork. A row of objects represents successive generations of reproduction: the leftmost is the unique original — pristine form, warm amber material, full aura. Moving right, Musgrave procedural noise displaces the surface progressively, eroding the form until the last copy is unrecognisable. Material colour shifts from warm ochre to cold blue-grey, mapping temperature to the presence or absence of aura."
-         data-zh="对沃尔特·本雅明《机械复制时代的艺术作品》论点的三维可视化。一排对象代表连续复制的世代：最左侧是独一无二的原作——形态完整，材质温暖，灵光完整。向右移动，穆斯格雷夫程序噪波逐步扭曲表面，直至最后一个副本面目全非。材质颜色从暖赭色渐变为冷蓝灰色，以温度映射灵光的有无。">
-        A three-dimensional visualisation of Walter Benjamin's thesis: a row of objects representing successive generations of reproduction. The original (left) is pristine — warm amber, full aura. Moving right, Musgrave noise erodes the form progressively. Material colour shifts from warm ochre to cold blue-grey — temperature mapping the presence or absence of aura.
+      <div class="env">Blender 5.x</div>
+      <h3>reproduction_matrix.py</h3>
+      <p data-en="Benjamin's aura in 3D: a row of objects where each step is a generation of reproduction. The original (left) is pristine — warm amber. Moving right, procedural noise erodes the form progressively and colour shifts to cold blue-grey. Aura fades with each copy."
+         data-zh="本雅明灵光的3D化：一排对象，每一步代表一代复制品。原作（左）形态完整、色调温暖；向右，程序噪波逐步侵蚀形态，颜色转为冷蓝灰——灵光随复制消散。">
+        Benjamin's aura in 3D: a row of objects where each step is a generation of reproduction. The original (left) is pristine — warm amber. Moving right, procedural noise erodes the form and colour shifts to cold blue-grey. Aura fades with each copy.
       </p>
-      <table class="param-table">
-        <thead>
-          <tr>
-            <th data-en="Parameter" data-zh="参数">Parameter</th>
-            <th data-en="Default" data-zh="默认值">Default</th>
-            <th data-en="Description" data-zh="说明">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>NUM_COPIES</code></td>
-            <td><code>7</code></td>
-            <td class="pdesc" data-en="Total objects in the matrix (original + N−1 reproductions)" data-zh="矩阵中的对象总数（原作 + N−1 个副本）">Total objects — original + N−1 reproductions</td>
-          </tr>
-          <tr>
-            <td><code>BASE_FORM</code></td>
-            <td><code>"sphere"</code></td>
-            <td class="pdesc" data-en="Starting shape: sphere | cube | torus" data-zh="起始形状：sphere（球体）| cube（立方体）| torus（圆环）"><code>"sphere"</code> · <code>"cube"</code> · <code>"torus"</code></td>
-          </tr>
-          <tr>
-            <td><code>MAX_NOISE</code></td>
-            <td><code>0.55</code></td>
-            <td class="pdesc" data-en="Maximum displacement strength on the last copy — 0.0 = identical copies" data-zh="最后一个副本的最大位移强度——0.0 = 完全相同的副本">Displacement strength at the last generation</td>
-          </tr>
-          <tr>
-            <td><code>SPACING</code></td>
-            <td><code>1.6</code></td>
-            <td class="pdesc" data-en="Distance between objects in Blender units" data-zh="对象之间的距离（Blender单位）">Distance between objects in Blender units</td>
-          </tr>
-          <tr>
-            <td><code>SEED</code></td>
-            <td><code>17</code></td>
-            <td class="pdesc" data-en="Random seed — each seed produces a different degradation path" data-zh="随机种子——不同的种子产生不同的退化路径">Random seed — change to explore degradation variants</td>
-          </tr>
-        </tbody>
-      </table>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/reproduction_matrix.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
     </div>
+
   </div>
 </section>
 
