@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1 — Art Between Matter and Code</title>
+  <meta name="description" content="Chapter 1: Ideas, Materials, Technologies and Aesthetics — supplementary materials.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .chapter-hero {
+      max-width: var(--max);
+      margin: 4rem auto 2rem;
+      padding: 0 2rem;
+    }
+    .chapter-hero .chap-label {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .chapter-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin-bottom: .8rem;
+    }
+    .chapter-hero .lead {
+      font-size: 1rem;
+      color: var(--sub);
+      max-width: 680px;
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      font-size: .85rem;
+      color: var(--sub);
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      margin-bottom: 2rem;
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+
+    /* ── Materials table ── */
+    .mat-section { margin-bottom: 3rem; }
+    .mat-section h2 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin-bottom: .3rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--accent2);
+      display: inline-block;
+    }
+    .mat-section p { font-size: .9rem; color: var(--sub); margin: .5rem 0 1rem; }
+    .mat-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    .mat-table th {
+      text-align: left;
+      padding: .5rem .8rem;
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-size: .75rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--border);
+    }
+    .mat-table td {
+      padding: .55rem .8rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .mat-table tr:last-child td { border-bottom: none; }
+    .mat-table tr:hover td { background: #f5f5f2; }
+    .mat-table a { font-weight: 500; }
+    .mat-table .note { color: var(--sub); font-size: .8rem; }
+
+    /* ── Script cards ── */
+    .script-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .script-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+    .script-card h3 { font-size: .95rem; margin-bottom: .3rem; color: var(--ink); }
+    .script-card .env {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent2);
+      margin-bottom: .4rem;
+    }
+    .script-card p { font-size: .82rem; color: var(--sub); line-height: 1.5; }
+    .script-card .dl-link {
+      display: inline-block;
+      margin-top: .7rem;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* ── Figure gallery ── */
+    .fig-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: .8rem;
+      margin-top: 1rem;
+    }
+    .fig-item { font-size: .78rem; color: var(--sub); }
+    .fig-item img {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      display: block;
+      margin-bottom: .3rem;
+      background: #f0f0ed;
+      min-height: 120px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Art Between Matter and Code</span>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-en="Home" data-zh="首页">Home</a></li>
+    <li><a href="../index.html#chapters" data-en="Chapters" data-zh="章节">Chapters</a></li>
+    <li><a href="../index.html#about" data-en="About" data-zh="关于">About</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="chapter-hero">
+  <a class="back-link" href="../index.html">← <span data-en="All chapters" data-zh="所有章节">All chapters</span></a>
+  <div class="chap-label" data-en="Chapter 1" data-zh="第1章">Chapter 1</div>
+  <h1 data-en="Ideas, Materials, Technologies and Aesthetics"
+      data-zh="观念、材料、技术与美学">Ideas, Materials, Technologies and Aesthetics</h1>
+  <p class="lead"
+     data-en="From Canova's marble to Fontana's spatial cuts: a journey through neoclassicism, spatialism, and the emergence of digital-physical art practice."
+     data-zh="从卡诺瓦的大理石到丰塔纳的空间切割：穿越新古典主义、空间主义与数字-物理艺术实践的涌现。">
+    From Canova's marble to Fontana's spatial cuts: a journey through neoclassicism, spatialism, and the emergence of digital-physical art practice.
+  </p>
+</div>
+
+<!-- SCRIPTS -->
+<section>
+  <h2 class="section-title" data-en="Scripts" data-zh="脚本">Scripts</h2>
+  <p class="section-sub"
+     data-en="Run directly in Blender 5.x (Scripting workspace) or via the Windows .bat launchers."
+     data-zh="可直接在Blender 5.x（脚本工作区）中运行，或通过Windows .bat启动器运行。">
+    Run directly in Blender 5.x (Scripting workspace) or via the Windows .bat launchers.
+  </p>
+  <div class="script-grid">
+    <div class="script-card">
+      <div class="env">Blender 5.x</div>
+      <h3>fontana_cut.py</h3>
+      <p data-en="Procedural boolean cuts on a plane — Fontana's Concetto Spaziale as a parametric operation. Parameters: NUM_CUTS, CUT_ANGLE, SPACING."
+         data-zh="平面上的程序化布尔切割——丰塔纳《空间概念》的参数化操作。参数：NUM_CUTS、CUT_ANGLE、SPACING。">
+        Procedural boolean cuts on a plane — Fontana's <em>Concetto Spaziale</em> as a parametric operation.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/fontana_cut.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+    <div class="script-card">
+      <div class="env">Blender 5.x</div>
+      <h3>parametric_space.py</h3>
+      <p data-en="Builds a deformed spatial grid from a field equation. Profiles: radial (Fontana-like), linear, turbulent."
+         data-zh="从场方程构建形变空间网格。模式：径向（丰塔纳风格）、线性、湍流。">
+        Builds a deformed spatial grid from a field equation. Profiles: radial, linear, turbulent.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/parametric_space.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+    <div class="script-card">
+      <div class="env">Python 3 (no deps)</div>
+      <h3>aura_transition.py</h3>
+      <p data-en="Generates the aura/reproducibility diagram as SVG — pure Python, no external libraries. Opens automatically in browser."
+         data-zh="将"灵光/复制"图表生成为SVG——纯Python，无需额外库，自动在浏览器中打开。">
+        Generates the aura/reproducibility diagram as SVG — pure Python, no external libraries.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/scripts/aura_transition.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section>
+  <h2 class="section-title" data-en="Documents" data-zh="文档">Documents</h2>
+  <p class="section-sub"
+     data-en="Essays and reference texts in section order."
+     data-zh="按章节顺序排列的论文和参考文本。">
+    Essays and reference texts in section order.
+  </p>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="File" data-zh="文件">File</th>
+          <th data-en="Section" data-zh="章节">Section</th>
+          <th data-en="Description" data-zh="描述">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/01_neoclassicism_and_canova.pdf" target="_blank" rel="noopener">01_neoclassicism_and_canova.pdf</a></td>
+          <td>§1.1.1</td>
+          <td data-en="Theoretical background on Neoclassicism and Canova" data-zh="新古典主义与卡诺瓦的理论背景">Theoretical background on Neoclassicism and Canova</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/02_the_plaster_archive.docx" target="_blank" rel="noopener">02_the_plaster_archive.docx</a></td>
+          <td>§1.1.2</td>
+          <td data-en="On the role of plaster models in sculptural tradition" data-zh="关于石膏模型在雕塑传统中的作用">On the role of plaster models in sculptural tradition</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/03_spazialismo_fontana.docx" target="_blank" rel="noopener">03_spazialismo_fontana.docx</a></td>
+          <td>§1.1.3</td>
+          <td data-en="Spatialism movement and Fontana's influence" data-zh="空间主义运动与丰塔纳的影响">Spatialism movement and Fontana's influence</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/03_light_space_perception.docx" target="_blank" rel="noopener">03_light_space_perception.docx</a></td>
+          <td>§1.1.3</td>
+          <td data-en="Light, space, and perception in art" data-zh="艺术中的光、空间与感知">Light, space, and perception in art</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/04_narrated_space.docx" target="_blank" rel="noopener">04_narrated_space.docx</a></td>
+          <td>§1.1.4</td>
+          <td data-en="Space as narrative in sculpture" data-zh="雕塑中作为叙事的空间">Space as narrative in sculpture</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/05_from_neoclassical_chisels_to_digital_code.docx" target="_blank" rel="noopener">05_from_neoclassical_chisels_to_digital_code.docx</a></td>
+          <td>§1.2</td>
+          <td data-en="Essay: transition from classical sculpture to digital tools" data-zh="论文：从古典雕塑到数字工具的转变">Essay: transition from classical sculpture to digital tools</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ARTIST NOTES -->
+<section>
+  <h2 class="section-title" data-en="Artist Notes" data-zh="艺术家笔记">Artist Notes</h2>
+  <p class="section-sub"
+     data-en="Extended profiles of the artists and collectives discussed in the chapter."
+     data-zh="本章讨论的艺术家和艺术团体的详细介绍。">
+    Extended profiles of the artists and collectives discussed in the chapter.
+  </p>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="Artist" data-zh="艺术家">Artist</th>
+          <th data-en="Section" data-zh="章节">Section</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/artist_notes/01_canova.md" target="_blank" rel="noopener">Antonio Canova</a></td>
+          <td>§1.1.1</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/artist_notes/03_fontana.md" target="_blank" rel="noopener">Lucio Fontana</a></td>
+          <td>§1.1.3</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/artist_notes/04_marchese_cavaliere.md" target="_blank" rel="noopener">Giancarlo Marchese &amp; Alik Cavaliere</a></td>
+          <td>§1.1.4</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/artist_notes/04_albertini_moioli.md" target="_blank" rel="noopener">Albertini &amp; Moioli</a></td>
+          <td>§1.1.4</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/01/docs/artist_notes/05_studio_azzurro.md" target="_blank" rel="noopener">Studio Azzurro</a></td>
+          <td>§1.2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 3D MODELS -->
+<section>
+  <h2 class="section-title" data-en="3D Models" data-zh="三维模型">3D Models</h2>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="File" data-zh="文件">File</th>
+          <th data-en="Description" data-zh="描述">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>fig_11_suspended_spaces.blend</td>
+          <td data-en="Fig. 11 — Suspended Spaces, Blender scene" data-zh="图11——悬浮空间，Blender场景">Fig. 11 — <em>Suspended Spaces</em>, Blender scene</td>
+        </tr>
+        <tr>
+          <td>fig_13_alien_forest.blend</td>
+          <td data-en="Fig. 13 — Alien Forest, Blender scene" data-zh="图13——异形森林，Blender场景">Fig. 13 — <em>Alien Forest</em>, Blender scene</td>
+        </tr>
+        <tr>
+          <td>fig_01_spazialismo_fontana.blend</td>
+          <td data-en="Spatialism reinterpretation — Fontana cut in 3D" data-zh="空间主义再诠释——丰塔纳切割的三维版本">Spatialism reinterpretation — Fontana cut in 3D</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p data-en="&copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0"
+     data-zh="&copy; 2025 莫伊奥利 · Apress / Springer Nature · CC BY-NC 4.0">
+    &copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0
+  </p>
+  <p style="margin-top:.4rem">
+    <a href="../index.html" data-en="Back to home" data-zh="返回首页">Back to home</a>
+  </p>
+</footer>
+
+<script src="../js/i18n.js"></script>
+</body>
+</html>

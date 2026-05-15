@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 2 — Art Between Matter and Code</title>
+  <meta name="description" content="Chapter 2: Digital Fabrication and Hybrid Sculpture — supplementary materials.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .chapter-hero {
+      max-width: var(--max);
+      margin: 4rem auto 2rem;
+      padding: 0 2rem;
+    }
+    .chapter-hero .chap-label {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .chapter-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin-bottom: .8rem;
+    }
+    .chapter-hero .lead {
+      font-size: 1rem;
+      color: var(--sub);
+      max-width: 680px;
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      font-size: .85rem;
+      color: var(--sub);
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      margin-bottom: 2rem;
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+
+    .mat-section { margin-bottom: 3rem; }
+    .mat-section h2 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin-bottom: .3rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--accent2);
+      display: inline-block;
+    }
+    .mat-section p { font-size: .9rem; color: var(--sub); margin: .5rem 0 1rem; }
+    .mat-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    .mat-table th {
+      text-align: left;
+      padding: .5rem .8rem;
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-size: .75rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--border);
+    }
+    .mat-table td {
+      padding: .55rem .8rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .mat-table tr:last-child td { border-bottom: none; }
+    .mat-table tr:hover td { background: #f5f5f2; }
+    .mat-table a { font-weight: 500; }
+
+    .script-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .script-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+    .script-card h3 { font-size: .95rem; margin-bottom: .3rem; color: var(--ink); }
+    .script-card .env {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent2);
+      margin-bottom: .4rem;
+    }
+    .script-card p { font-size: .82rem; color: var(--sub); line-height: 1.5; }
+    .script-card .dl-link {
+      display: inline-block;
+      margin-top: .7rem;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* workflow diagram */
+    .workflow {
+      display: flex;
+      gap: 0;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .wf-step {
+      flex: 1;
+      min-width: 130px;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      padding: .8rem 1rem;
+      position: relative;
+      font-size: .82rem;
+    }
+    .wf-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--accent);
+      font-weight: 700;
+      z-index: 1;
+    }
+    .wf-step .wf-num {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: .2rem;
+    }
+    .wf-step strong { display: block; font-size: .85rem; margin-bottom: .2rem; }
+    .wf-step span { color: var(--sub); }
+
+    @media (max-width: 700px) {
+      .workflow { flex-direction: column; }
+      .wf-step:not(:last-child)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -16px; transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Art Between Matter and Code</span>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-en="Home" data-zh="首页">Home</a></li>
+    <li><a href="../index.html#chapters" data-en="Chapters" data-zh="章节">Chapters</a></li>
+    <li><a href="../index.html#about" data-en="About" data-zh="关于">About</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="chapter-hero">
+  <a class="back-link" href="../index.html">← <span data-en="All chapters" data-zh="所有章节">All chapters</span></a>
+  <div class="chap-label" data-en="Chapter 2" data-zh="第2章">Chapter 2</div>
+  <h1 data-en="Digital Fabrication and Hybrid Sculpture"
+      data-zh="数字制造与混合雕塑">Digital Fabrication and Hybrid Sculpture</h1>
+  <p class="lead"
+     data-en="From Kapoor's inflated geometries to photogrammetry pipelines: CNC, 3D printing, scan-to-mesh, and the four-phase hybrid workflow that merges manual intuition with generative precision."
+     data-zh="从卡普尔的充气几何到摄影测量流程：CNC、三维打印、扫描转网格，以及将手工直觉与生成精度融合的四阶段混合工作流。">
+    From Kapoor's inflated geometries to photogrammetry pipelines: CNC, 3D printing, scan-to-mesh, and the four-phase hybrid workflow that merges manual intuition with generative precision.
+  </p>
+
+  <!-- Hybrid workflow diagram -->
+  <div class="workflow">
+    <div class="wf-step">
+      <div class="wf-num" data-en="Phase 1" data-zh="阶段1">Phase 1</div>
+      <strong data-en="Manual" data-zh="手工">Manual</strong>
+      <span data-en="Clay maquette, sketches" data-zh="泥塑小样、草图">Clay maquette, sketches</span>
+    </div>
+    <div class="wf-step">
+      <div class="wf-num" data-en="Phase 2" data-zh="阶段2">Phase 2</div>
+      <strong data-en="Digital" data-zh="数字">Digital</strong>
+      <span data-en="Scan / model in Blender" data-zh="扫描/在Blender中建模">Scan / model in Blender</span>
+    </div>
+    <div class="wf-step">
+      <div class="wf-num" data-en="Phase 3" data-zh="阶段3">Phase 3</div>
+      <strong data-en="Generative" data-zh="生成">Generative</strong>
+      <span data-en="Procedural displacement, AI" data-zh="程序化置换、人工智能">Procedural displacement, AI</span>
+    </div>
+    <div class="wf-step">
+      <div class="wf-num" data-en="Phase 4" data-zh="阶段4">Phase 4</div>
+      <strong data-en="Fabrication" data-zh="制造">Fabrication</strong>
+      <span data-en="CNC, 3D print, cast" data-zh="CNC、三维打印、铸造">CNC, 3D print, cast</span>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<section>
+  <h2 class="section-title" data-en="Scripts" data-zh="脚本">Scripts</h2>
+  <p class="section-sub"
+     data-en="Run directly in Blender 5.x (Scripting workspace) or via the Windows .bat launchers."
+     data-zh="可直接在Blender 5.x（脚本工作区）中运行，或通过Windows .bat启动器运行。">
+    Run directly in Blender 5.x (Scripting workspace) or via the Windows .bat launchers.
+  </p>
+  <div class="script-grid">
+    <div class="script-card">
+      <div class="env">Blender 5.x</div>
+      <h3>piazza_metafisica.py</h3>
+      <p data-en="Builds the Piazza Metafisica hybrid sculpture: arcade, floor, displaced volumes — across Object, Edit, and Sculpt modes. Companion to Figs. 4–8."
+         data-zh="构建形而上广场混合雕塑：拱廊、地板、形变体量——跨越物体模式、编辑模式和雕刻模式。配合图4–8。">
+        Builds the <em>Piazza Metafisica</em> hybrid sculpture across Object, Edit, and Sculpt modes.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/02/scripts/piazza_metafisica.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+    <div class="script-card">
+      <div class="env">Blender 5.x</div>
+      <h3>hybrid_workflow.py</h3>
+      <p data-en="Four-phase pipeline: clay maquette → voxel remesh → multi-frequency displacement → fabrication export (optional STL). Companion to Fig. 11."
+         data-zh="四阶段流程：泥塑小样→体素重网格→多频置换→制造导出（可选STL）。配合图11。">
+        Four-phase pipeline from clay maquette to fabrication export. Optional STL output.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/02/scripts/hybrid_workflow.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+    <div class="script-card">
+      <div class="env">Blender 5.x</div>
+      <h3>scan_cleanup.py</h3>
+      <p data-en="Photogrammetry mesh post-processing: merge doubles, fill holes, recalculate normals, optional voxel remesh and subdivision. Works on the active selected object."
+         data-zh="摄影测量网格后处理：合并重复点、填补孔洞、重算法线，可选体素重网格和细分。作用于当前选中物体。">
+        Photogrammetry mesh post-processing: clean, repair, and optionally remesh a scan.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/02/scripts/scan_cleanup.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section>
+  <h2 class="section-title" data-en="Documents" data-zh="文档">Documents</h2>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="File" data-zh="文件">File</th>
+          <th data-en="Section" data-zh="章节">Section</th>
+          <th data-en="Description" data-zh="描述">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/02/docs/ref_glossary.md" target="_blank" rel="noopener">ref_glossary.md</a></td>
+          <td>all</td>
+          <td data-en="35 key terms: Boolean, photogrammetry, voxel remesh, NeRF, STL, PBR…" data-zh="35个关键术语：布尔、摄影测量、体素重网格、NeRF、STL、PBR……">35 key terms: Boolean, photogrammetry, voxel remesh, NeRF, STL, PBR…</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/02/docs/artist_notes/01_kapoor_balmond.md" target="_blank" rel="noopener">01_kapoor_balmond.md</a></td>
+          <td>§2.1</td>
+          <td data-en="Anish Kapoor + Cecil Balmond: Marsyas, Cloud Gate, Tall Tree and The Eye" data-zh="安尼施·卡普尔 + 塞西尔·巴尔蒙德：《马耳西亚斯》《云门》《高树与眼》">Anish Kapoor + Cecil Balmond: Marsyas, Cloud Gate, Tall Tree and The Eye</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/02/docs/artist_notes/02_eliasson.md" target="_blank" rel="noopener">02_eliasson.md</a></td>
+          <td>§2.2</td>
+          <td data-en="Olafur Eliasson: The Weather Project, Expanded Studio concept" data-zh="奥拉维尔·埃利亚松：《天气计划》，扩展工作室概念">Olafur Eliasson: The Weather Project, Expanded Studio concept</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/02/docs/artist_notes/03_moore.md" target="_blank" rel="noopener">03_moore.md</a></td>
+          <td>§2.3</td>
+          <td data-en="Henry Moore: maquettes as generative seeds, mass/void, digital fluid matrix" data-zh="亨利·摩尔：作为生成种子的小样、体量/虚空、数字流体矩阵">Henry Moore: maquettes as generative seeds, mass/void, digital fluid matrix</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 3D MODELS -->
+<section>
+  <h2 class="section-title" data-en="3D Models &amp; Media" data-zh="三维模型与媒体">3D Models &amp; Media</h2>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="File" data-zh="文件">File</th>
+          <th data-en="Description" data-zh="描述">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>fig_04_kapoor_marsyas_study.blend</td>
+          <td data-en="Fig. 4 — Marsyas parametric study, Blender scene" data-zh="图4——《马耳西亚斯》参数化研究，Blender场景">Fig. 4 — Marsyas parametric study, Blender scene</td>
+        </tr>
+        <tr>
+          <td>fig_08_piazza_metafisica.blend</td>
+          <td data-en="Fig. 8 — Piazza Metafisica, Blender scene" data-zh="图8——形而上广场，Blender场景">Fig. 8 — <em>Piazza Metafisica</em>, Blender scene</td>
+        </tr>
+        <tr>
+          <td>fig_11_hybrid_workflow.blend</td>
+          <td data-en="Fig. 11 — Hybrid workflow demo, Blender scene" data-zh="图11——混合工作流演示，Blender场景">Fig. 11 — Hybrid workflow demo, Blender scene</td>
+        </tr>
+        <tr>
+          <td>fig_11_hybrid_workflow_animation.mp4</td>
+          <td data-en="Fig. 11 — Rendered animation of the four-phase workflow" data-zh="图11——四阶段工作流的渲染动画">Fig. 11 — Rendered animation of the four-phase workflow</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p data-en="&copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0"
+     data-zh="&copy; 2025 莫伊奥利 · Apress / Springer Nature · CC BY-NC 4.0">
+    &copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0
+  </p>
+  <p style="margin-top:.4rem">
+    <a href="../index.html" data-en="Back to home" data-zh="返回首页">Back to home</a>
+  </p>
+</footer>
+
+<script src="../js/i18n.js"></script>
+</body>
+</html>
