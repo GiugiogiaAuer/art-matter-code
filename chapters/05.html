@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 5 — Art Between Matter and Code</title>
+  <meta name="description" content="Chapter 5: States of Transformation — Painting, Sculpture, and Digital Expansion. Supplementary materials.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .chapter-hero {
+      max-width: var(--max);
+      margin: 4rem auto 2rem;
+      padding: 0 2rem;
+    }
+    .chapter-hero .chap-label {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .chapter-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin-bottom: .8rem;
+    }
+    .chapter-hero .lead {
+      font-size: 1rem;
+      color: var(--sub);
+      max-width: 680px;
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      font-size: .85rem;
+      color: var(--sub);
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      margin-bottom: 2rem;
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+
+    .mat-section { margin-bottom: 3rem; }
+    .mat-section h2 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin-bottom: .3rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--accent2);
+      display: inline-block;
+    }
+    .mat-section p { font-size: .9rem; color: var(--sub); margin: .5rem 0 1rem; }
+    .mat-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    .mat-table th {
+      text-align: left;
+      padding: .5rem .8rem;
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-size: .75rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--border);
+    }
+    .mat-table td {
+      padding: .55rem .8rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .mat-table tr:last-child td { border-bottom: none; }
+    .mat-table tr:hover td { background: #f5f5f2; }
+    .mat-table a { font-weight: 500; }
+
+    .script-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .script-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+    .script-card h3 { font-size: .95rem; margin-bottom: .3rem; color: var(--ink); font-family: "Consolas", "Courier New", monospace; }
+    .script-card .env {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent2);
+      margin-bottom: .4rem;
+    }
+    .script-card p { font-size: .82rem; color: var(--sub); line-height: 1.5; }
+    .script-card .dl-link {
+      display: inline-block;
+      margin-top: .7rem;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Art Between Matter and Code</span>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-en="Home" data-zh="首页">Home</a></li>
+    <li><a href="../index.html#chapters" data-en="Chapters" data-zh="章节">Chapters</a></li>
+    <li><a href="../index.html#about" data-en="About" data-zh="关于">About</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="chapter-hero">
+  <a class="back-link" href="../index.html">← <span data-en="All chapters" data-zh="所有章节">All chapters</span></a>
+  <div class="chap-label" data-en="Chapter 5" data-zh="第5章">Chapter 5</div>
+  <h1 data-en="States of Transformation: Painting, Sculpture, and Digital Expansion"
+      data-zh="转化的状态：绘画、雕塑与数字扩展">States of Transformation: Painting, Sculpture, and Digital Expansion</h1>
+  <p class="lead"
+     data-en="How manual gesture and digital algorithm converge in contemporary art: hybrid painting, AI-driven expansions, virtual sculpture, 3D scanning and fabrication, and the post-human identity that emerges from it all."
+     data-zh="手工姿态与数字算法如何在当代艺术中融合：混合绘画、AI驱动的扩展、虚拟雕塑、三维扫描与制造，以及由此浮现的后人类身份。">
+    How manual gesture and digital algorithm converge in contemporary art: hybrid painting, AI-driven expansions, virtual sculpture, 3D scanning and fabrication, and the post-human identity that emerges from it all.
+  </p>
+</div>
+
+<!-- CHAPTER STRUCTURE -->
+<section>
+  <h2 class="section-title" data-en="Chapter Structure" data-zh="章节结构">Chapter Structure</h2>
+
+  <div class="toc">
+    <div class="toc-part">
+      <span class="toc-part-label" data-en="Part II — From Real to Virtual" data-zh="第二部分 — 从现实到虚拟">Part II — From Real to Virtual</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">5.1</span>
+      <span class="toc-title" data-en="Hybrid Techniques" data-zh="混合技术">Hybrid Techniques</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.1.1</span>
+      <span class="toc-title" data-en="Generative Tools: Artificial Intelligence as a Creative Partner" data-zh="生成工具：人工智能作为创意伙伴">Generative Tools: Artificial Intelligence as a Creative Partner</span>
+    </div>
+    <div class="toc-item toc-l3">
+      <span class="toc-num">5.1.1.1</span>
+      <span class="toc-title" data-en="Generation ex novo" data-zh="从头生成">Generation ex novo</span>
+    </div>
+    <div class="toc-item toc-l3">
+      <span class="toc-num">5.1.1.2</span>
+      <span class="toc-title" data-en="Transformation and Hybridization of Existing Images" data-zh="现有图像的转化与混合">Transformation and Hybridization of Existing Images</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.1.2</span>
+      <span class="toc-title" data-en="Portraits: Post-Human Visages" data-zh="肖像：后人类面孔">Portraits: Post-Human Visages</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.1.3</span>
+      <span class="toc-title" data-en="The Artist as Curator of Generative Systems" data-zh="艺术家作为生成系统的策展人">The Artist as Curator of Generative Systems</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">5.2</span>
+      <span class="toc-title" data-en="Beyond the Canvas: Painting between Manual Gesture and Algorithm" data-zh="超越画布：手工姿态与算法之间的绘画">Beyond the Canvas: Painting between Manual Gesture and Algorithm</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.2.1</span>
+      <span class="toc-title" data-en="Manual Painting as a Foundation" data-zh="手工绘画作为基础">Manual Painting as a Foundation</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.2.2</span>
+      <span class="toc-title" data-en="Virtual Painting in Digital Environments" data-zh="数字环境中的虚拟绘画">Virtual Painting in Digital Environments</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">5.3</span>
+      <span class="toc-title" data-en="Hybridizations and Expansions with Artificial Intelligence" data-zh="人工智能的混合化与扩展">Hybridizations and Expansions with Artificial Intelligence</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.3.1</span>
+      <span class="toc-title" data-en="Hybridizations · Expansions · Authorship · Video and Multimedia" data-zh="混合化·扩展·作者性·视频与多媒体">Hybridizations · Expansions · Authorship · Video and Multimedia</span>
+    </div>
+    <div class="toc-item toc-l3">
+      <span class="toc-num">5.3.1.4.1</span>
+      <span class="toc-title" data-en="Mini tutorial: Creating Short Video Sequences with MidJourney V7 and Blender 5.0" data-zh="迷你教程：用MidJourney V7和Blender 5.0创建短视频序列">Mini tutorial: Creating Short Video Sequences with MidJourney V7 and Blender 5.0</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.3.1.5</span>
+      <span class="toc-title" data-en="A Historical Echo: From Fontana to AI Brushes" data-zh="历史回响：从丰塔纳到AI画笔">A Historical Echo: From Fontana to AI Brushes</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">5.4</span>
+      <span class="toc-title" data-en="From Manual to Virtual Sculpture" data-zh="从手工到虚拟雕塑">From Manual to Virtual Sculpture</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.4.1</span>
+      <span class="toc-title" data-en="Manual Sculpture as a Starting Point" data-zh="手工雕塑作为起点">Manual Sculpture as a Starting Point</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.4.2</span>
+      <span class="toc-title" data-en="Virtual Sculpture" data-zh="虚拟雕塑">Virtual Sculpture</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.4.3</span>
+      <span class="toc-title" data-en="Algorithmic Growth: Toward Procedural Sculpture" data-zh="算法生长：走向程序化雕塑">Algorithmic Growth: Toward Procedural Sculpture</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.4.4</span>
+      <span class="toc-title" data-en="Sculpting Processes: From Hands to Code to AI" data-zh="雕塑过程：从双手到代码到AI">Sculpting Processes: From Hands to Code to AI</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">5.5</span>
+      <span class="toc-title" data-en="Hybrid Practices Between Real and Virtual Sculpture" data-zh="真实与虚拟雕塑之间的混合实践">Hybrid Practices Between Real and Virtual Sculpture</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.5.1</span>
+      <span class="toc-title" data-en="From the Real to the Virtual and Back Again: 3D Scanning and Printing" data-zh="从现实到虚拟再回来：三维扫描与打印">From the Real to the Virtual and Back Again: 3D Scanning and Printing</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.5.2</span>
+      <span class="toc-title" data-en="Lost Codes: Fragments of Memory in Digital Clay" data-zh="失落的密码：数字泥土中的记忆碎片">Lost Codes: Fragments of Memory in Digital Clay</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">5.6</span>
+      <span class="toc-title" data-en="Beyond Sculpture and Painting" data-zh="超越雕塑与绘画">Beyond Sculpture and Painting</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.6.1</span>
+      <span class="toc-title" data-en="Multiple Dimensions" data-zh="多重维度">Multiple Dimensions</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">5.6.2</span>
+      <span class="toc-title" data-en="Post-Human Identities" data-zh="后人类身份">Post-Human Identities</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">5.7</span>
+      <span class="toc-title" data-en="Conclusion" data-zh="结论">Conclusion</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">App. F</span>
+      <span class="toc-title" data-en="Detailed Fabrication and Casting Protocols" data-zh="详细制造与铸造协议">Detailed Fabrication and Casting Protocols</span>
+    </div>
+    <div class="toc-item toc-l1">
+      <span class="toc-num">App. G</span>
+      <span class="toc-title" data-en="Ethical, Legal, and Provenance Implications of the Certification Protocol" data-zh="认证协议的伦理、法律与来源含义">Ethical, Legal, and Provenance Implications of the Certification Protocol</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<section>
+  <h2 class="section-title" data-en="Scripts" data-zh="脚本">Scripts</h2>
+  <p class="section-sub"
+     data-en="Standard Python 3.x — no external libraries required. Double-click the .bat launcher (Windows) or run from the terminal."
+     data-zh="标准Python 3.x——无需外部库。双击.bat启动器（Windows）或从终端运行。">
+    Standard Python 3.x — no external libraries required. Double-click the .bat launcher (Windows) or run from the terminal.
+  </p>
+
+  <div class="script-grid">
+
+    <div class="script-card">
+      <div class="env">Python 3.x · §5.1</div>
+      <h3>hybrid_workflow_diagram.py</h3>
+      <p data-en="Generates the Hybrid Workflow — Technical Process diagram as a standalone SVG. Maps the full continuum from manual painting and sculpting through AI generation and 3D printing to exhibition and certification. Opens in any browser."
+         data-zh="生成混合工作流——技术过程图表为独立SVG。从手工绘画和雕塑到AI生成、3D打印、展览与认证的完整流程。在任何浏览器中打开。">
+        Maps manual → scanning → AI → fabrication → exhibition. Output: <code>ref_hybrid_workflow_diagram.svg</code>.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/05/scripts/hybrid_workflow_diagram.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+  </div>
+
+  <p style="margin-top:1rem;font-size:.85rem;color:var(--sub);">
+    <span data-en="Script documentation and parameters:" data-zh="脚本文档与参数：">Script documentation and parameters:</span>
+    <a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/05/scripts/README.md"
+       target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">
+      scripts/README.md ↗
+    </a>
+  </p>
+</section>
+
+<!-- DOCUMENTS -->
+<section>
+  <h2 class="section-title" data-en="Documents" data-zh="文档">Documents</h2>
+  <p class="section-sub"
+     data-en="Reference glossary and artist notes in section order."
+     data-zh="按章节顺序排列的参考词汇表和艺术家笔记。">
+    Reference glossary and artist notes in section order.
+  </p>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="File" data-zh="文件">File</th>
+          <th data-en="Section" data-zh="章节">Section</th>
+          <th data-en="Description" data-zh="描述">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/05/docs/ref_glossary.md" target="_blank" rel="noopener">ref_glossary.md</a></td>
+          <td>all</td>
+          <td data-en="Key terms: hybrid techniques, AI generation, inpainting, outpainting, Stable Diffusion, ComfyUI, photogrammetry, procedural generation, lost-wax casting, CDM, post-human identity…" data-zh="关键术语：混合技术、AI生成、内绘、外绘、Stable Diffusion、ComfyUI、摄影测量、程序化生成、失蜡铸造、CDM、后人类身份……">Key terms: hybrid techniques, AI generation, inpainting/outpainting, photogrammetry, procedural generation, lost-wax casting, CDM, post-human identity…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ARTIST NOTES -->
+<section>
+  <h2 class="section-title" data-en="Artist Notes" data-zh="艺术家笔记">Artist Notes</h2>
+  <p class="section-sub"
+     data-en="Extended profiles of the artists discussed in the chapter."
+     data-zh="本章讨论的艺术家的详细介绍。">
+    Extended profiles of the artists discussed in the chapter.
+  </p>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="Artist" data-zh="艺术家">Artist</th>
+          <th data-en="Section" data-zh="章节">Section</th>
+          <th data-en="Topic" data-zh="主题">Topic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/05/docs/artist_notes/01_hockney.md" target="_blank" rel="noopener">David Hockney</a></td>
+          <td>§5.2.2</td>
+          <td data-en="iPad drawings and The Yosemite Suite — manual gesture finding continuity in the digital interface; scale independence from screen to monumental print" data-zh="iPad绘画与《约塞米蒂组曲》——手工姿态在数字界面中的延续；从屏幕到大型印刷的尺度独立性"><em>The Yosemite Suite</em> — iPad drawings as continuity of manual gesture in digital space</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/05/docs/artist_notes/02_fontana.md" target="_blank" rel="noopener">Lucio Fontana</a></td>
+          <td>§5.3.1.5 / §5.4</td>
+          <td data-en="Spatialism (1947) — art must embrace real space and real time; read in the chapter as the theoretical ancestor of AI outpainting and virtual sculpture" data-zh="空间主义（1947）——艺术必须拥抱真实空间与真实时间；在本章中被视为AI外绘与虚拟雕塑的理论先驱">Spatialism manifestos — precursor to AI outpainting and virtual sculpture</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/05/docs/artist_notes/03_op_de_beeck.md" target="_blank" rel="noopener">Hans Op de Beeck</a></td>
+          <td>§5.4.4</td>
+          <td data-en="Nocturnal Journey (2025) — 39 life-size sculptures from 3D scanning, refined by hand in grey resin: digital precision as poetic echo, not cold copy" data-zh="《夜之旅》（2025）——39件从3D扫描获得的真人大小雕塑，手工精制为灰色树脂：数字精度作为诗意回响，而非冷漠复制"><em>Nocturnal Journey</em> (2025) — 3D scanning + manual resin finishing as poetic echo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- IMAGES -->
+<section>
+  <h2 class="section-title" data-en="Images" data-zh="图像">Images</h2>
+  <p class="section-sub"
+     data-en="Reference diagram for Chapter 5 — generated by the script above."
+     data-zh="第5章参考图——由上方脚本生成。">
+    Reference diagram for Chapter 5 — generated by the script above.
+  </p>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="File" data-zh="文件">File</th>
+          <th data-en="Description" data-zh="描述">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/05/images/ref_hybrid_workflow_diagram.svg" target="_blank" rel="noopener">ref_hybrid_workflow_diagram.svg</a></td>
+          <td data-en="Hybrid Workflow — Technical Process: from manual painting and sculpting through scanning, AI generation, 3D modeling and fabrication to exhibition and certification" data-zh="混合工作流——技术过程：从手工绘画和雕塑，经扫描、AI生成、三维建模与制造，到展览和认证">Hybrid Workflow — Technical Process diagram (§5.1, Figures 4–5)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p data-en="&copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0"
+     data-zh="&copy; 2025 莫伊奥利 · Apress / Springer Nature · CC BY-NC 4.0">
+    &copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0
+  </p>
+  <p style="margin-top:.4rem">
+    <a href="../index.html" data-en="Back to home" data-zh="返回首页">Back to home</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/Apress/Art-Between-Matter-and-Code/tree/main/05" target="_blank" rel="noopener">GitHub ↗</a>
+  </p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
