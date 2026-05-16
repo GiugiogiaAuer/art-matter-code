@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 4 — Art Between Matter and Code</title>
+  <meta name="description" content="Chapter 4: Uniqueness, Identity, and Digital Certification — supplementary materials.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .chapter-hero {
+      max-width: var(--max);
+      margin: 4rem auto 2rem;
+      padding: 0 2rem;
+    }
+    .chapter-hero .chap-label {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .chapter-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin-bottom: .8rem;
+    }
+    .chapter-hero .lead {
+      font-size: 1rem;
+      color: var(--sub);
+      max-width: 680px;
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      font-size: .85rem;
+      color: var(--sub);
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      margin-bottom: 2rem;
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+
+    .mat-section { margin-bottom: 3rem; }
+    .mat-section h2 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin-bottom: .3rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--accent2);
+      display: inline-block;
+    }
+    .mat-section p { font-size: .9rem; color: var(--sub); margin: .5rem 0 1rem; }
+    .mat-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    .mat-table th {
+      text-align: left;
+      padding: .5rem .8rem;
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-size: .75rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--border);
+    }
+    .mat-table td {
+      padding: .55rem .8rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .mat-table tr:last-child td { border-bottom: none; }
+    .mat-table tr:hover td { background: #f5f5f2; }
+    .mat-table a { font-weight: 500; }
+
+    .script-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .script-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+    .script-card h3 { font-size: .95rem; margin-bottom: .3rem; color: var(--ink); font-family: "Consolas", "Courier New", monospace; }
+    .script-card .env {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent2);
+      margin-bottom: .4rem;
+    }
+    .script-card p { font-size: .82rem; color: var(--sub); line-height: 1.5; }
+    .script-card .dl-link {
+      display: inline-block;
+      margin-top: .7rem;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Art Between Matter and Code</span>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-en="Home" data-zh="首页">Home</a></li>
+    <li><a href="../index.html#chapters" data-en="Chapters" data-zh="章节">Chapters</a></li>
+    <li><a href="../index.html#about" data-en="About" data-zh="关于">About</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="chapter-hero">
+  <a class="back-link" href="../index.html">← <span data-en="All chapters" data-zh="所有章节">All chapters</span></a>
+  <div class="chap-label" data-en="Chapter 4" data-zh="第4章">Chapter 4</div>
+  <h1 data-en="Uniqueness, Identity, and Digital Certification"
+      data-zh="唯一性、身份与数字认证">Uniqueness, Identity, and Digital Certification</h1>
+  <p class="lead"
+     data-en="From Walter Benjamin's aura to NFTs and blockchain: how digital art reclaims uniqueness and authenticity in an era of infinite reproducibility — and what generative AI adds to the paradox."
+     data-zh="从瓦尔特·本雅明的光晕到NFT与区块链：在无限复制的时代，数字艺术如何重申唯一性与真实性——以及生成式AI为这一悖论增添了什么。">
+    From Walter Benjamin's aura to NFTs and blockchain: how digital art reclaims uniqueness and authenticity in an era of infinite reproducibility — and what generative AI adds to the paradox.
+  </p>
+</div>
+
+<!-- CHAPTER STRUCTURE -->
+<section>
+  <h2 class="section-title" data-en="Chapter Structure" data-zh="章节结构">Chapter Structure</h2>
+
+  <div class="toc">
+    <div class="toc-part">
+      <span class="toc-part-label" data-en="Part I — Aura and Reproducibility" data-zh="第一部分 — 光晕与复制">Part I — Aura and Reproducibility</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">4.1</span>
+      <span class="toc-title" data-en="The Concept of Aura: Benjamin and the Work of Art" data-zh="光晕的概念：本雅明与艺术作品">The Concept of Aura: Benjamin and the Work of Art</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">4.1.1</span>
+      <span class="toc-title" data-en="Aura as Presence: Place, Time, and Uniqueness" data-zh="作为在场的光晕：地点、时间与唯一性">Aura as Presence: Place, Time, and Uniqueness</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">4.1.2</span>
+      <span class="toc-title" data-en="Mechanical Reproduction and the Erosion of Aura" data-zh="机械复制与光晕的消蚀">Mechanical Reproduction and the Erosion of Aura</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">4.2</span>
+      <span class="toc-title" data-en="Five Phases: From Handmade Object to AI-Generated Work" data-zh="五个阶段：从手工物件到AI生成作品">Five Phases: From Handmade Object to AI-Generated Work</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">4.2.1</span>
+      <span class="toc-title" data-en="Cast and Mould: Limited Series, Preserved Aura" data-zh="铸造与模具：限量系列，保存光晕">Cast and Mould: Limited Series, Preserved Aura</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">4.2.2</span>
+      <span class="toc-title" data-en="Digital and Parametric: Infinite Copies, Re-Aura via NFT" data-zh="数字与参数化：无限复制，通过NFT重塑光晕">Digital and Parametric: Infinite Copies, Re-Aura via NFT</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">4.2.3</span>
+      <span class="toc-title" data-en="AI-Generated: Generative Aura and the Unique Process" data-zh="AI生成：生成性光晕与独特过程">AI-Generated: Generative Aura and the Unique Process</span>
+    </div>
+
+    <div class="toc-part">
+      <span class="toc-part-label" data-en="Part II — Digital Certification and Identity" data-zh="第二部分 — 数字认证与身份">Part II — Digital Certification and Identity</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">4.3</span>
+      <span class="toc-title" data-en="NFTs and Blockchain as Certification Tools" data-zh="NFT与区块链作为认证工具">NFTs and Blockchain as Certification Tools</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">4.3.1</span>
+      <span class="toc-title" data-en="How NFTs Work: Token, Ledger, and Provenance" data-zh="NFT的运作方式：代币、账本与来源">How NFTs Work: Token, Ledger, and Provenance</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">4.3.2</span>
+      <span class="toc-title" data-en="Limits and Critiques: Ownership vs. Access" data-zh="局限与批评：所有权与访问权">Limits and Critiques: Ownership vs. Access</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">4.4</span>
+      <span class="toc-title" data-en="Identity and Authorship in Generative Art" data-zh="生成艺术中的身份与作者性">Identity and Authorship in Generative Art</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">4.4.1</span>
+      <span class="toc-title" data-en="Who Is the Author? Human, Algorithm, or Both?" data-zh="谁是作者？人类、算法，还是两者兼而有之？">Who Is the Author? Human, Algorithm, or Both?</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">4.4.2</span>
+      <span class="toc-title" data-en="Digital Signature and the Future of Certification" data-zh="数字签名与认证的未来">Digital Signature and the Future of Certification</span>
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<section>
+  <h2 class="section-title" data-en="Scripts" data-zh="脚本">Scripts</h2>
+  <p class="section-sub"
+     data-en="Standard Python 3.x — no Blender required. Run from the terminal or double-click the launcher."
+     data-zh="标准Python 3.x——无需Blender。从终端运行或双击启动器。">
+    Standard Python 3.x — no Blender required. Run from the terminal or double-click the launcher.
+  </p>
+
+  <div class="script-grid">
+
+    <div class="script-card">
+      <div class="env">Python 3.x · §4.2</div>
+      <h3>aura_transition.py</h3>
+      <p data-en="Generates the Aura &amp; Reproducibility diagram as a standalone SVG — five phases from handmade object to AI-generated work, plotting two crossing curves after Walter Benjamin (1935). Opens in any browser."
+         data-zh="生成光晕与复制性图表为独立SVG——从手工物件到AI生成作品的五个阶段，绘制沃尔特·本雅明（1935）之后的两条交叉曲线。在任何浏览器中打开。">
+        Plots Aura and Reproducibility as two crossing curves across five historical phases. Output: <code>ref_aura_transition_diagram.svg</code>.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/04/scripts/aura_transition.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+  </div>
+
+  <p style="margin-top:1rem;font-size:.85rem;color:var(--sub);">
+    <span data-en="Full parameter reference:" data-zh="完整参数说明：">Full parameter reference:</span>
+    <a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/04/scripts/README.md"
+       target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">
+      scripts/README.md ↗
+    </a>
+  </p>
+</section>
+
+<!-- REFERENCE DIAGRAM -->
+<section>
+  <h2 class="section-title" data-en="Reference Diagram" data-zh="参考图表">Reference Diagram</h2>
+  <p class="section-sub"
+     data-en="Conceptual diagram generated by the script — also available as a static file."
+     data-zh="由脚本生成的概念图表——也可作为静态文件获取。">
+    Conceptual diagram generated by the script — also available as a static file.
+  </p>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="File" data-zh="文件">File</th>
+          <th data-en="Description" data-zh="描述">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/04/scripts/ref_aura_transition_diagram.svg" target="_blank" rel="noopener">ref_aura_transition_diagram.svg</a></td>
+          <td data-en="Aura vs. Reproducibility — five phases from handmade object to AI-generated work, after Walter Benjamin (1935)" data-zh="光晕与复制性——从手工物件到AI生成作品的五个阶段，沃尔特·本雅明（1935）之后">Aura vs. Reproducibility — five phases from handmade object to AI-generated work, after Walter Benjamin (1935)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p data-en="&copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0"
+     data-zh="&copy; 2025 莫伊奥利 · Apress / Springer Nature · CC BY-NC 4.0">
+    &copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0
+  </p>
+  <p style="margin-top:.4rem">
+    <a href="../index.html" data-en="Back to home" data-zh="返回首页">Back to home</a>
+  </p>
+</footer>
+
+<script src="../js/i18n.js"></script>
+</body>
+</html>
