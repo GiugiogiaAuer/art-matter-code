@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 6 — Art Between Matter and Code</title>
+  <meta name="description" content="Chapter 6: From Virtuality to Matter — 3D Printing and Material Translation. Supplementary materials.">
+  <link rel="canonical" href="https://giugiogiaauer.github.io/art-matter-code/chapters/06.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .chapter-hero {
+      max-width: var(--max);
+      margin: 4rem auto 2rem;
+      padding: 0 2rem;
+    }
+    .chapter-hero .chap-label {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .chapter-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin-bottom: .8rem;
+    }
+    .chapter-hero .lead {
+      font-size: 1rem;
+      color: var(--sub);
+      max-width: 680px;
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      font-size: .85rem;
+      color: var(--sub);
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      margin-bottom: 2rem;
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+
+    .mat-section { margin-bottom: 3rem; }
+    .mat-section h2 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin-bottom: .3rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--accent2);
+      display: inline-block;
+    }
+    .mat-section p { font-size: .9rem; color: var(--sub); margin: .5rem 0 1rem; }
+    .mat-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    .mat-table th {
+      text-align: left;
+      padding: .5rem .8rem;
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-size: .75rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--border);
+    }
+    .mat-table td {
+      padding: .55rem .8rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .mat-table tr:last-child td { border-bottom: none; }
+    .mat-table tr:hover td { background: #f5f5f2; }
+    .mat-table a { font-weight: 500; }
+
+    .script-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .script-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+    .script-card h3 { font-size: .95rem; margin-bottom: .3rem; color: var(--ink); font-family: "Consolas", "Courier New", monospace; }
+    .script-card .env {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent2);
+      margin-bottom: .4rem;
+    }
+    .script-card p { font-size: .82rem; color: var(--sub); line-height: 1.5; }
+    .script-card .dl-link {
+      display: inline-block;
+      margin-top: .7rem;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Art Between Matter and Code</span>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-en="Home" data-zh="首页">Home</a></li>
+    <li><a href="../index.html#chapters" data-en="Chapters" data-zh="章节">Chapters</a></li>
+    <li><a href="../index.html#about" data-en="About" data-zh="关于">About</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="chapter-hero">
+  <a class="back-link" href="../index.html">← <span data-en="All chapters" data-zh="所有章节">All chapters</span></a>
+  <div class="chap-label" data-en="Chapter 6" data-zh="第6章">Chapter 6</div>
+  <h1 data-en="From Virtuality to Matter: 3D Printing and Material Translation"
+      data-zh="从虚拟到物质：三维打印与材料转化">From Virtuality to Matter: 3D Printing and Material Translation</h1>
+  <p class="lead"
+     data-en="How digital models become physical objects: FDM, SLA, SLS, and ceramic 3D printing techniques, material selection, iterative prototyping, robotic fabrication, and the author's own works in modular PLA sculpture."
+     data-zh="数字模型如何成为实体：FDM、SLA、SLS与陶瓷3D打印技术、材料选择、迭代原型制作、机器人制造，以及作者本人的模块化PLA雕塑作品。">
+    How digital models become physical objects: FDM, SLA, SLS, and ceramic 3D printing techniques, material selection, iterative prototyping, robotic fabrication, and the author's own works in modular PLA sculpture.
+  </p>
+</div>
+
+<!-- CHAPTER STRUCTURE -->
+<section>
+  <h2 class="section-title" data-en="Chapter Structure" data-zh="章节结构">Chapter Structure</h2>
+
+  <div class="toc">
+    <div class="toc-part">
+      <span class="toc-part-label" data-en="Part III — From Virtual to Real" data-zh="第三部分 — 从虚拟到现实">Part III — From Virtual to Real</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">6.1</span>
+      <span class="toc-title" data-en="From Virtuality to Matter: The Virtual-to-Physical Workflow" data-zh="从虚拟到物质：虚实转化工作流">From Virtuality to Matter: The Virtual-to-Physical Workflow</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.1.1</span>
+      <span class="toc-title" data-en="The Fabrication Chain: From File to Object" data-zh="制造链：从文件到实体">The Fabrication Chain: From File to Object</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">6.2</span>
+      <span class="toc-title" data-en="Printing Techniques: FDM, SLA, SLS, and PolyJet" data-zh="打印技术：FDM、SLA、SLS与PolyJet">Printing Techniques: FDM, SLA, SLS, and PolyJet</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.2.1</span>
+      <span class="toc-title" data-en="FDM — Fused Deposition Modeling" data-zh="FDM——熔融沉积成型">FDM — Fused Deposition Modeling</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.2.2</span>
+      <span class="toc-title" data-en="SLA and MSLA — Resin Printing" data-zh="SLA与MSLA——树脂打印">SLA and MSLA — Resin Printing</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.2.3</span>
+      <span class="toc-title" data-en="SLS — Selective Laser Sintering" data-zh="SLS——选择性激光烧结">SLS — Selective Laser Sintering</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.2.4</span>
+      <span class="toc-title" data-en="PolyJet — Multi-Material Printing" data-zh="PolyJet——多材料打印">PolyJet — Multi-Material Printing</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.2.5</span>
+      <span class="toc-title" data-en="Mini tutorial: Blender 3D Print Toolbox" data-zh="迷你教程：Blender 3D打印工具箱">Mini tutorial: Blender 3D Print Toolbox</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">6.3</span>
+      <span class="toc-title" data-en="WASP Ceramic Printing and Robotic Fabrication" data-zh="WASP陶瓷打印与机器人制造">WASP Ceramic Printing and Robotic Fabrication</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.3.1</span>
+      <span class="toc-title" data-en="Clay and Porcelain Extrusion" data-zh="陶土与瓷土挤出">Clay and Porcelain Extrusion</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.3.2</span>
+      <span class="toc-title" data-en="The CEREBRO Slicer" data-zh="CEREBRO切片软件">The CEREBRO Slicer</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.3.3</span>
+      <span class="toc-title" data-en="Robotic Arm Fabrication (KUKA|prc)" data-zh="机械臂制造（KUKA|prc）">Robotic Arm Fabrication (KUKA|prc)</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">6.4</span>
+      <span class="toc-title" data-en="Iterative Prototyping: The Feedback Loop" data-zh="迭代原型：反馈循环">Iterative Prototyping: The Feedback Loop</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.4.1</span>
+      <span class="toc-title" data-en="From Prototype to Final Work" data-zh="从原型到最终作品">From Prototype to Final Work</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">6.5</span>
+      <span class="toc-title" data-en="Case Studies" data-zh="案例研究">Case Studies</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.5.1</span>
+      <span class="toc-title" data-en="Dragon in the Forest (Modular PLA, Kobra 2 Max)" data-zh="森林中的龙（模块化PLA，Kobra 2 Max）">Dragon in the Forest (Modular PLA, Kobra 2 Max)</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.5.2</span>
+      <span class="toc-title" data-en="Little Metaphysical Piazza (SLA Resin, Anycubic Photon M5)" data-zh="小形而上广场（SLA树脂，Anycubic Photon M5）">Little Metaphysical Piazza (SLA Resin, Anycubic Photon M5)</span>
+    </div>
+    <div class="toc-item toc-l2">
+      <span class="toc-num">6.5.3</span>
+      <span class="toc-title" data-en="Still Life with Fruit Basket (Multicolor FDM)" data-zh="带果篮的静物（多色FDM）">Still Life with Fruit Basket (Multicolor FDM)</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">6.6</span>
+      <span class="toc-title" data-en="Conclusion" data-zh="结论">Conclusion</span>
+    </div>
+
+    <div class="toc-item toc-l1">
+      <span class="toc-num">App. H</span>
+      <span class="toc-title" data-en="Material Selection Guide" data-zh="材料选择指南">Material Selection Guide</span>
+    </div>
+    <div class="toc-item toc-l1">
+      <span class="toc-num">App. I</span>
+      <span class="toc-title" data-en="Slicer Parameter Reference" data-zh="切片参数参考">Slicer Parameter Reference</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<section>
+  <h2 class="section-title" data-en="Scripts" data-zh="脚本">Scripts</h2>
+  <p class="section-sub"
+     data-en="Standard Python 3.x — no external libraries required. Double-click the .bat launcher (Windows) or run from the terminal."
+     data-zh="标准Python 3.x——无需外部库。双击.bat启动器（Windows）或从终端运行。">
+    Standard Python 3.x — no external libraries required. Double-click the .bat launcher (Windows) or run from the terminal.
+  </p>
+
+  <div class="script-grid">
+
+    <div class="script-card">
+      <div class="env">Python 3.x · §6.1</div>
+      <h3>fabrication_workflow_diagram.py</h3>
+      <p data-en="Generates the Virtual-to-Physical Fabrication Workflow diagram as a standalone SVG. Maps the complete chain from 3D model and photogrammetry scan through mesh repair, slicing, printing (FDM/SLA/SLS/WASP), post-processing, and final output. Opens in any browser."
+         data-zh="生成虚拟到实体制造工作流图表为独立SVG。从3D模型和摄影测量扫描，经网格修复、切片、打印（FDM/SLA/SLS/WASP）、后处理到最终输出的完整链路。在任何浏览器中打开。">
+        Maps virtual model → mesh repair → slicing → printing → post-processing → output. Output: <code>ref_fabrication_workflow_diagram.svg</code>.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/scripts/fabrication_workflow_diagram.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+    <div class="script-card">
+      <div class="env">Blender 4.3+ · §6.2.5</div>
+      <h3>print_ready_checker.py</h3>
+      <p data-en="Checks the active mesh object for 3D printability: non-manifold geometry detection via bmesh, bounding box dimensions, automatic Remove Doubles and Recalculate Normals (if AUTO_FIX=True), and full 3D Print Toolbox diagnostic. Reports to System Console."
+         data-zh="检查活动网格对象的3D打印准备状态：通过bmesh检测非流形几何体、边界框尺寸、自动删除重复顶点和重算法线（AUTO_FIX=True时），以及完整的3D打印工具箱诊断。报告至系统控制台。">
+        Non-manifold check + bounding box + normals + 3D Print Toolbox. Open in Blender Scripting → <code>Alt+P</code>.
+      </p>
+      <a class="dl-link"
+         href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/scripts/print_ready_checker.py"
+         target="_blank" rel="noopener">↗ View on GitHub</a>
+    </div>
+
+  </div>
+
+  <p style="margin-top:1rem;font-size:.85rem;color:var(--sub);">
+    <span data-en="Script documentation and parameters:" data-zh="脚本文档与参数：">Script documentation and parameters:</span>
+    <a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/scripts/README.md"
+       target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">
+      scripts/README.md ↗
+    </a>
+  </p>
+</section>
+
+<!-- DOCUMENTS -->
+<section>
+  <h2 class="section-title" data-en="Documents" data-zh="文档">Documents</h2>
+  <p class="section-sub"
+     data-en="Reference glossary and artist notes in section order."
+     data-zh="按章节顺序排列的参考词汇表和艺术家笔记。">
+    Reference glossary and artist notes in section order.
+  </p>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="File" data-zh="文件">File</th>
+          <th data-en="Section" data-zh="章节">Section</th>
+          <th data-en="Description" data-zh="描述">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/docs/ref_glossary.md" target="_blank" rel="noopener">ref_glossary.md</a></td>
+          <td>all</td>
+          <td data-en="Key terms: additive manufacturing, FDM/SLA/SLS/PolyJet, slicing, WASP, CEREBRO, modular assembly, non-manifold geometry, tolerance, wall thickness, material translation, CDM…" data-zh="关键术语：增材制造、FDM/SLA/SLS/PolyJet、切片、WASP、CEREBRO、模块化组装、非流形几何体、公差、壁厚、材料转化、CDM……">Key terms: additive manufacturing, FDM/SLA/SLS/PolyJet, slicing, WASP, CEREBRO, modular assembly, non-manifold geometry, material translation…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ARTIST NOTES -->
+<section>
+  <h2 class="section-title" data-en="Artist Notes" data-zh="艺术家笔记">Artist Notes</h2>
+  <p class="section-sub"
+     data-en="Extended profiles of the artists discussed in the chapter."
+     data-zh="本章讨论的艺术家的详细介绍。">
+    Extended profiles of the artists discussed in the chapter.
+  </p>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="Artist" data-zh="艺术家">Artist</th>
+          <th data-en="Section" data-zh="章节">Section</th>
+          <th data-en="Topic" data-zh="主题">Topic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/docs/artist_notes/01_beasley.md" target="_blank" rel="noopener">Bruce Beasley</a></td>
+          <td>§6.1</td>
+          <td data-en="Pioneer of computer-aided bronze sculpture (Evans &amp; Sutherland, 1980s) — first artist to systematically bridge computer modeling and physical casting" data-zh="计算机辅助青铜雕塑先驱（Evans &amp; Sutherland，1980年代）——首位系统性连接计算机建模与实体铸造的艺术家">Pioneer of computer-aided bronze casting — <em>Augustium</em> series (Evans &amp; Sutherland, 1980s)</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/docs/artist_notes/02_kapoor_factum.md" target="_blank" rel="noopener">Anish Kapoor + Factum Arte</a></td>
+          <td>§6.1</td>
+          <td data-en="Cloud Gate (2006): CNC steel fabrication at monumental scale. Factum Arte: ultra-high-resolution scanning and CNC-fabricated facsimiles of Veronese and Tutankhamun" data-zh="云门（2006）：大尺度CNC钢铁制造。Factum Arte：韦罗内塞和图坦卡蒙的超高分辨率扫描与CNC制造复制品"><em>Cloud Gate</em> (2006) — CNC monumental fabrication; Factum Arte heritage scanning + CNC facsimiles</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/docs/artist_notes/03_gormley.md" target="_blank" rel="noopener">Antony Gormley</a></td>
+          <td>§6.1</td>
+          <td data-en="Body casting and digital scanning as re-materialization chain — Angel of the North, Another Place, Event Horizon: the scanned body reconstituted in iron and steel" data-zh="身体铸造和数字扫描作为再物质化链——北方天使、另一个地方、事件地平线：扫描的身体以铁和钢重现"><em>Angel of the North</em> — body as matrix for digital scanning and physical re-materialization in iron</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/docs/artist_notes/04_oxman.md" target="_blank" rel="noopener">Neri Oxman</a></td>
+          <td>§6.3</td>
+          <td data-en="Silk Pavilion (2013): CNC-controlled silkworm silk deposition + biological completion. Aguahoja I (2018): robotic biopolymer deposition — overlap with WASP ceramic philosophy" data-zh="蚕丝亭（2013）：CNC控制的蚕丝沉积+生物完成。Aguahoja I（2018）：机器人生物聚合物沉积——与WASP陶瓷理念重叠"><em>Silk Pavilion</em> (2013) — bio-inspired material deposition; overlap with WASP ceramic printing philosophy</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/docs/artist_notes/05_hansmeyer.md" target="_blank" rel="noopener">Michael Hansmeyer</a></td>
+          <td>§6.2</td>
+          <td data-en="Digital Grotesque (2013): 260M-face sandstone columns at 16 µm resolution — extreme geometric complexity enabled by additive manufacturing" data-zh="数字洛可可（2013）：16微米分辨率下2.6亿面砂岩柱——增材制造使极端几何复杂性成为可能"><em>Digital Grotesque</em> (2013) — 260M-face sandstone, 16 µm: complexity enabled by additive manufacturing</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/docs/artist_notes/06_karle.md" target="_blank" rel="noopener">Amy Karle</a></td>
+          <td>§6.3</td>
+          <td data-en="Regenerative Reliquary (2016): SLA biopolymer scaffold seeded with stem cells — additive manufacturing as platform for biological creativity" data-zh="再生圣物箱（2016）：接种干细胞的SLA生物聚合物支架——增材制造作为生物创造力的平台"><em>Regenerative Reliquary</em> (2016) — 3D-printed scaffold for stem cell growth; art, biology, and additive manufacturing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- IMAGES -->
+<section>
+  <h2 class="section-title" data-en="Images" data-zh="图像">Images</h2>
+  <p class="section-sub"
+     data-en="Reference diagram for Chapter 6 — generated by the script above."
+     data-zh="第6章参考图——由上方脚本生成。">
+    Reference diagram for Chapter 6 — generated by the script above.
+  </p>
+  <div class="mat-section">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th data-en="File" data-zh="文件">File</th>
+          <th data-en="Description" data-zh="描述">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/Apress/Art-Between-Matter-and-Code/blob/main/06/images/ref_fabrication_workflow_diagram.svg" target="_blank" rel="noopener">ref_fabrication_workflow_diagram.svg</a></td>
+          <td data-en="Virtual-to-Physical Fabrication Workflow: five-column diagram from 3D model and scan through mesh repair, slicing, printing (FDM/SLA/SLS/WASP Ceramic), post-processing, and output. Generated by fabrication_workflow_diagram.py." data-zh="虚拟到实体制造工作流：从3D模型和扫描，经网格修复、切片、打印（FDM/SLA/SLS/WASP陶瓷）、后处理到输出的五列图表。由fabrication_workflow_diagram.py生成。">Virtual-to-Physical Fabrication Workflow diagram (§6.1, Figure in the chapter)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p data-en="&copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0"
+     data-zh="&copy; 2025 莫伊奥利 · Apress / Springer Nature · CC BY-NC 4.0">
+    &copy; 2025 Gianpiero Moioli · Apress / Springer Nature · CC BY-NC 4.0
+  </p>
+  <p style="margin-top:.4rem">
+    <a href="../index.html" data-en="Back to home" data-zh="返回首页">Back to home</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/Apress/Art-Between-Matter-and-Code/tree/main/06" target="_blank" rel="noopener">GitHub ↗</a>
+  </p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
